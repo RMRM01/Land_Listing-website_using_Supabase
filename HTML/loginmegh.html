@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+    <link rel="icon" href="../image/logo.png">
+  <!-- Elegant Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #0f3460, #16213e);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+ 
+    .login-container {
+      background-color: #1a1a2e;
+      padding: 40px 30px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #e94560;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: #eee;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 14px;
+      border: none;
+      border-radius: 6px;
+      background-color: #22244c;
+      color: #fff;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    input:focus {
+      outline: none;
+      background-color: #2d2f5a;
+      border: 1px solid #e94560;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #e94560;
+      border: 2px solid #e94560;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+ 
+    .btn:hover {
+      background-color: transparent;
+      transform: translateY(-2px);
+    
+      font-weight: 600;
+    }
+
+    .extra {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    @media (max-width: 500px) {
+      .login-container {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <div class="form-group">
+      <label for="mobileNo">Moblie No</label>
+      <input type="text" id="mobileNo" placeholder="Enter your mobile number">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password">
+    </div>
+
+    <button class="btn" id="submit">Login</button>
+
+    <div class="extra">
+      Don't have an account? <a href="resistration.html" style="color:#e94560;">Register</a>
+    </div>
+  </div>
+
+  <script type="module">
+
+  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+  
+  const supabaseUrl = 'https://piyoxjnheqxjuirsvjfh.supabase.co'
+  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBpeW94am5oZXF4anVpcnN2amZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg0ODkxNjksImV4cCI6MjA2NDA2NTE2OX0.3obYtWnE210mFbwWMhAF-k55i5IRSDV9PlF-fQqY1F8';
+ 
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+const submit = document.getElementById("submit");
+
+submit.addEventListener("click", async function (event) {
+  event.preventDefault();
+
+
+  let mobileNo = document.getElementById("mobileNo").value.trim();
+  let password = document.getElementById("password").value;
+ 
+
+ 
+
+  
+  const { data, error } = await supabase
+    .from('users')
+    .select("*")
+    .eq("mobile",mobileNo)
+    .single();
+   
+
+  if (error) {
+    
+    alert('Please Resister First');
+  } else {
+    if(data.mobile == mobileNo && data.password == password)
+  {
+    alert("Welcome "+ `${data.name}`);
+    localStorage.setItem("mobileNo",data.mobile);
+    window.location.href="../HTML/index.html";
+  }
+  else{
+    alert("Mobile No and password doesn't match");
+  }
+  }
+});
+
+
+  </script>
+</body>
+</html>

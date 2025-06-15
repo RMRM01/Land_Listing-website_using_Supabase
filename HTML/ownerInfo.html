@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Land Owner Profile - LandLister</title>
+     <link rel="icon" href="../image/logo.png">
+    <link rel="stylesheet" href="../CSS/style1.css" />
+    <link rel="stylesheet" href="../CSS/ownerInfo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+     
+     <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+    >
+
+    <!-- START: Crucial step for dark page background -->
+    <style>
+      body {
+        background: linear-gradient(
+          to right,
+          #0f3460,
+          #16213e
+        ); /* Dark theme from your example */
+        color: #fff; /* Default text color for the page */
+        font-family: "Poppins", sans-serif; /* Optional: if you also want the theme's font */
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+      }
+    </style>
+    <!-- END: Crucial step for dark page background -->
+  </head>
+  <body>
+
+    
+    <!-- Start of Nabbar ---- ----------->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img
+            src="../image/logo.png"
+            alt="LandLister Logo"
+            style="height: 40px; margin-right: 10px"
+          />
+          <span>LandLister</span>
+        </div>
+        <nav>
+        <ul>
+            <li><a href="../HTML/index.html">Home</a></li>
+            <li><a href="../HTML/index.html#land-for-sell">Land For Sell</a></li>
+            <li><a href="../HTML/index.html#sold-property">Sold Properties</a></li>
+            <li><a href="../HTML/about.html" onclick="senddata();">About Us</a></li>
+            <li><a href="../HTML/HelpPage.html" onclick="senddata();">Help</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button class="add-property-btn">
+            <i class="fas fa-plus"></i> Add property
+          </button>
+          <span class="icon user-name"
+            ><i class="far fa-user-circle"></i> <span id="navbar-name">Rifat</span></span
+          >
+           <span class="icon-notification" id="notification"> <i class="fa-solid fa-bell"> </i></span>
+         <span class="icon" id="log-out">
+            <a href="../HTML/LogOut.html" class="nav-link"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+          </span>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- End of Nabbar ---- ----------->
+
+    <div class="container page-content">
+      
+
+      <section class="owner-profile-section">
+        <div class="owner-header">
+          <div class="owner-avatar" >
+            <img id="owner-profile-picture"
+              src=""
+              alt=""
+              
+            />
+          </div>
+          <div class="owner-info-main">
+            <h1 class="owner-name" id="owner-page-name">Abdul Karim</h1>
+            <p class="owner-tagline" id="owner-tagline">Land Owner</p>
+            <div class="owner-contact-details">
+              <span><i class="fas fa-envelope"></i>
+                <a href="mailto:abdulkarim@example.com" id="owner-page-email"
+                >abdulkarim@example.com</a>
+              </span>
+              <span
+                ><i class="fas fa-phone-alt"></i>
+                <a href="tel:+8801700000000" id="owner-page-phone"
+                  >+880 17XX XXX XXX</a
+                ></span
+              >
+              <span>
+                <i class="fas fa-map-marker-alt" ></i> <div id="owner-location"></div>
+              </span>
+            </div>
+          </div>
+        </div>
+<!-- Owner ABout ME bio -->
+        <div class="owner-bio">
+          <h2 class="section-title-sub">About Me</h2>
+          <p id="owner-bio-text">
+            I am the owner of this prime plot in Uttara. This land is ideal for
+            development or commercial use, with excellent potential for
+            investment. I prefer to deal directly with buyers and am always
+            available to answer any questions you may have. Feel free to contact
+            me for more details about the property or to schedule a visit.
+          </p>
+        </div>
+
+<!-- Added owner-stats section based on original CSS, assuming it might have been omitted in HTML -->
+        <div class="owner-stats-container" style="padding: 0 40px 40px">
+          <!-- Wrapper for padding if needed -->
+          <h2
+            class="section-title-sub"
+            style="text-align: left; margin-bottom: 25px"
+          >
+            My Statistics
+          </h2>
+ <!-- Example title for stats -->
+          <div class="owner-stats">
+            <div class="stat-card">
+              <div class="stat-number" id="properties-sold">12</div>
+              <div class="stat-label">Properties Sold</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="years-experience">5</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="active-listings">3</div>
+              <div class="stat-label">Active Listings</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- Listed Land For sell  -->
+
+
+      <section class="owner-listings-section listed-land" >
+        <h2 class="section-title" id="owner-properties-title">
+          My Listed Properties
+        </h2>
+   
+        <div class="listings-grid" id="listed-properties">
+      <!-- 
+          
+      
+      <a href="landInfo.html?id=1" class="listing-card">
+            <div class="listing-image">
+              <img
+                src="../image/Mohammedpur1.jpeg"
+                alt="Property in Mohammadpur"
+              />
+            </div>
+            <div class="listing-details">
+              <h3 class="listing-title">Residential Plot in Uttara</h3>
+              <p class="listing-location">
+                <i class="fas fa-map-marker-alt"></i> Road 12, Sector 6,
+                Mohammadpur, Dhaka
+              </p>
+              <div class="listing-specs">
+                <span><i class="fas fa-ruler-combined"></i> 5 Katha</span>
+              </div>
+              <div class="listing-price">৳55,00,000</div>
+            </div>
+          </a>
+          -->
+
+         
+        </div>
+      </section>
+
+
+ 
+
+
+      <!-- Sold sold Sold Land Section -->
+
+
+      <section class="owner-listings-section boughted-land">
+        <h2 class="section-title" id="owner-properties-title">
+          Solded Property
+        </h2>
+   
+        <div class="listings-grid" id="sold-properties">
+
+          <!-- Property Card  as a sample  -->
+      
+           <!--     <a href="landInfo.html?id=1" class="listing-card">
+             <div class="listing-image">
+              <img
+                src="../image/Mohammedpur1.jpeg"
+                alt="Property in Mohammadpur"
+              />
+             </div>
+             <div class="listing-details">
+               <h3 class="listing-title">Residential Plot in Uttara</h3>
+               <p class="listing-location">
+                  <i class="fas fa-map-marker-alt"></i> Road 12, Sector 6,
+                  Mohammadpur, Dhaka
+               </p>
+                <div class="listing-specs">
+                  <span><i class="fas fa-ruler-combined"></i> 5 Katha</span>
+                  
+                </div>
+                <div class="listing-price">৳55,00,000</div>
+             </div>
+          </a>-->
+        
+        </div>
+      </section>
+
+
+       <!-- sold  Land For End  -->
+
+
+
+ <!-- Bought Land Starts------------------>
+
+
+
+
+<section class="owner-listings-section boughted-land">
+        <h2 class="section-title" id="owner-properties-title">
+          Boughted Property
+        </h2>
+   
+        <div class="listings-grid" id="bought-properties">
+          <!-- Property Card  as a sample  -->
+          
+          <!--
+           <a href="landInfo.html?id=1" class="listing-card">
+           <div class="listing-image">
+              <img
+                src="../image/Mohammedpur1.jpeg"
+                alt="Property in Mohammadpur"
+              />
+            </div>
+            <div class="listing-details">
+              <h3 class="listing-title">Residential Plot in Uttara</h3>
+              <p class="listing-location">
+                <i class="fas fa-map-marker-alt"></i> Road 12, Sector 6,
+                Mohammadpur, Dhaka
+              </p>
+              <div class="listing-specs">
+                <span><i class="fas fa-ruler-combined"></i> 5 Katha</span>
+              </div>
+              <div class="listing-price">৳55,00,000</div>
+            </div>
+          </a>
+          
+          -->
+
+
+
+  
+        </div>
+      </section>
+
+</div>
+
+
+
+
+
+
+<!-- Footer Starts-->
+
+
+    <footer class="footer" id="contact">
+      <!-- Footer styles will still come from index.css -->
+      <div class="footer-content container">
+        <div class="footer-column">
+          <div class="logo-footer">
+            <img
+              src="../image/logo.png"
+              alt="LandLister Logo"
+              style="height: 30px; margin-right: 8px"
+            />
+            LAND LISTER
+          </div>
+          <p class="contact-info">
+            <i class="far fa-envelope"></i> contact@landlister.com.bd
+          </p>
+          <p class="contact-info">
+            <i class="fas fa-phone-alt"></i> +880 17790XXXXX
+          </p>
+          <address>
+            The Fantastic Four <br />
+            Mirpur DOHS, Dhaka-1216<br />
+            Dhaka,Bangladesh
+          </address>
+        </div>
+        <div class="footer-column">
+          <h4 style="color: white">Quick links</h4>
+          <ul>
+            <li>
+              <a href="#" style="color: #eee; text-decoration: none"
+                >Buy Property</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #eee; text-decoration: none"
+                >Sell Property</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #eee; text-decoration: none"
+                >Popular Offers</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #eee; text-decoration: none"
+                >Terms of Service</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 style="color: white">Profile</h4>
+          <ul>
+            <li>
+              <a href="#" style="color: #eee; text-decoration: none"
+                >My account</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #eee; text-decoration: none"
+                >My listings</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #eee; text-decoration: none"
+                >Add listings</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #eee; text-decoration: none"
+                >Help center</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #eee; text-decoration: none"
+                >Privacy policy</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Get exclusive advice</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <p>© 2025 LandLister Bangladesh. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="../JS/ownerinfo.js" type="module">
+     </script>
+  </body>
+</html>

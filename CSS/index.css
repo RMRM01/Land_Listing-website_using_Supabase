@@ -1,0 +1,673 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+/* Nav-bar start */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-content {
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background-color: #1a1a2e;
+    padding: 15px 0;
+   color: white;
+    position: sticky;
+    top: 0;
+      
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+}
+
+header .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin:0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #e53935;
+    border-bottom: 2px solid #e53935;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.header-actions .icon {
+    margin:0 10px;
+    cursor: pointer;
+    color: white;
+}
+.icon-notification{
+    background-color: red;
+}
+.add-property-btn {
+    background-color: #e53935;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 20px;
+    transition: background-color 0.3s ease;
+}
+.header-actions span a{
+    text-decoration: none ;
+    
+    transition: all 0.3s ease-in-out;
+    color: red;
+}
+.header-actions span a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/images/hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-section p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+}
+
+/* Property Type Filter */
+.p_type {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.p_type li a {
+    text-decoration: none;
+    color: #555;
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.p_type li a:hover, .p_type li a.active {
+    background-color: #e53935;
+    color: white;
+    border-color: #e53935;
+}
+
+/* Land Listings */
+.land-listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.land-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.land-card:hover {
+    transform: translateY(-5px);
+}
+
+.land-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center 70%; /* Show more of the land rather than the sky */
+    filter: contrast(1.1); /* Make the land features more visible */
+}
+
+.land-card-footer {
+    padding: 20px;
+}
+
+.land-card-footer h5 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.land-card-footer p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.land-card-footer span {
+    display: inline-block;
+    margin-right: 20px;
+    color: #777;
+    font-size: 0.95em;
+}
+
+/* Footer */
+.footer {
+    background-color: #263238;
+    color: #fff;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footer-column h4 {
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 1.4em;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #e53935;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .header-actions {
+        margin-top: 20px;
+    }
+
+    .hero-section {
+        padding: 60px 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .p_type {
+        flex-wrap: wrap;
+    }
+
+    .p_type li {
+        margin-bottom: 10px;
+    }
+
+    .land-card img {
+        height: 150px;  /* Further reduced for mobile */
+    }
+
+    .sold-card img {
+        height: 100px;  /* Further reduced for mobile */
+    }
+
+    .about-content .right img {
+        height: 200px;  /* Further reduced for mobile */
+    }
+
+    .team-member img {
+        height: 150px;
+    }
+
+    .testimonial .client-info img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .blog-card img {
+        height: 150px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+/* Sold Listings */
+.sold-listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.sold-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.sold-card:hover {
+    transform: translateY(-5px);
+}
+
+.sold-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    object-position: center 60%;
+    filter: contrast(1.1) grayscale(0.2); /* Slightly desaturated for sold properties */
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.about-content .left {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-content .right {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.about-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #e53935;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.about-content .right img {
+    width: 100%;
+    height: 220px;
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: center 70%;
+    filter: contrast(1.1);
+}
+
+/* Team Section */
+.team-section {
+    margin-bottom: 40px;
+}
+
+.team-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #e53935;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    margin: 15px 0 10px;
+}
+
+.team-member p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.team-member .social-icons {
+    margin-top: 10px;
+}
+
+.team-member .social-icons a {
+    color: #555;
+    margin: 0 10px;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.team-member .social-icons a:hover {
+    color: #e53935;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    background-color: #f1f1f1;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.testimonial-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #e53935;
+}
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.testimonial {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial p {
+    color: #666;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.testimonial .client-info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.testimonial .client-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.testimonial .client-info h4 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.testimonial .client-info span {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Blog Section */
+.blog-section {
+    margin-bottom: 40px;
+}
+
+.blog-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #e53935;
+}
+
+.blog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.blog-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.blog-card h3 {
+    font-size: 1.8em;
+    margin: 15px 0 10px;
+}
+
+.blog-card p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.blog-card a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #e53935;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.blog-card a:hover {
+    color: #c62828;
+}
+
+/* Contact Section */
+.contact-section {
+    margin-bottom: 40px;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #e53935;
+}
+
+.contact-form {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    background-color: #e53935;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #c62828;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .header-actions {
+        margin-top: 20px;
+    }
+
+    .hero-section {
+        padding: 60px 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .p_type {
+        flex-wrap: wrap;
+    }
+
+    .p_type li {
+        margin-bottom: 10px;
+    }
+
+    .land-card img {
+        height: 150px;  /* Further reduced for mobile */
+    }
+
+    .sold-card img {
+        height: 100px;  /* Further reduced for mobile */
+    }
+
+    .about-content .right img {
+        height: 200px;  /* Further reduced for mobile */
+    }
+
+    .team-member img {
+        height: 150px;
+    }
+
+    .testimonial .client-info img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .blog-card img {
+        height: 150px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awsom -->
+         <link
+    rel="stylesheet"
+    data-purpose="Layout StyleSheet"
+    title="Web Awesome"
+    href="/css/app-wa-54e7be3a62ca9b7580d7f8c669f59e74.css?vsn=d"
+  >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
+    >
+
+    <!-- Css link -->
+     <!-- <link rel="stylesheet" href"> -->
+      <link rel="icon" href="../image/logo.png">
+      <link rel="stylesheet" href="../CSS/style.css">
+
+    <title>Home page</title>
+</head>
+<body>
+    <!-- Nav bar start-->
+     <header>
+      <div class="container">
+        <div class="logo">
+          <img
+            src="../image/logo.png"
+            alt="LandLister Logo"
+            style="height: 40px; margin-right: 10px"
+          />
+          <span>LandLister</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="../HTML/index.html">Home</a></li>
+            <li><a href="#land-for-sell">Land For Sell</a></li>
+            <li><a href="#sold-property">Sold Properties</a></li>
+            <li><a href="../HTML/about.html" onclick="senddata();">About Us</a></li>
+            <li><a href="../HTML/HelpPage.html" onclick="senddata();">Help</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button class="add-property-btn" id="add-property-btn">
+            <i class="fas fa-plus"></i> Add property
+          </button>
+          <span class="icon user-name"
+            ><i class="far fa-user-circle"></i> <span id="user-name">Rifat</span></span
+          >
+          <span class="icon-notification" id="notification"> <i class="fa-solid fa-bell"> </i></span>
+
+          <span class="icon">
+            <a href="#" class="nav-link" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+          </span>
+          
+        </div>
+      </div>
+    </header>
+    <!-- Nav bar End-->
+
+   <!-- =====================Banner====================== -->
+    <div class="Banner_part">
+        <div class="container">
+            <div class="banner_wrapper">
+                <h2 class="banner_title">Easy way to find a perfect property</h2>
+                <p class="banner_subtitle">We provide a complete service for the sale, purchase or rental of real estate. </p>
+
+                <div class="Hero_search_div">
+                    <img src="../image/Home_icon.png" alt="" class="Home_icon">
+                    <div>
+                        <input type="text" class="search_input" placeholder="Enter an address, neighborhood, city, or ZIP code">
+                    </div>
+                    <select name="Location" id="location" placeholder="Type" class="">
+                        <option value="volvo">Type</option>
+                        <option value="Agriculture">Agriculture</option>
+                        <option value="Building">Sky Scrapper</option>
+                        <option value="Reantal">Rental</option>
+                    </select>
+                    <div class="filter_div">
+                        <img src="../image/filter_icon.png" alt="../image/filter_icon.png" class="filter_icon">
+                        <p class="filter_icon_subtitle">Advanced</p>
+                    </div>
+                    <i class="fa-light fa-magnifying-glass search_icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   <!-- =====================Banner====================== -->
+
+
+   <!-- =================Statistics section==================== -->
+    <div class="statistics_part">
+        <div class="container">
+            <div class="statistics_wrapper">
+                <div class="Stats_one stats--baar">
+                    <h3 class="stats_title">Home</h3>
+                    <div class="stats_sub_sec">
+                        <img src="../image/bookmark.png" alt="../image/bookmark.png">
+                    <p class="stats_summary">6.4K offers</p>
+                    </div>
+                    
+                </div>
+        
+                
+
+                <div class="Stats_one stats--baar">
+                    <h3 class="stats_title">Apartments</h3>
+                    <div class="stats_sub_sec">
+                        <img src="../image/bookmark.png" alt="../image/bookmark.png">
+                    <p class="stats_summary">12.8K offers</p>
+                    </div>
+                </div>
+
+                <div class="Stats_one stats--baar">
+                    <h3 class="stats_title">Commercial</h3>
+                    <div class="stats_sub_sec">
+                        <img src="../image/bookmark.png" alt="../image/bookmark.png">
+                    <p class="stats_summary">9.3K offers</p>
+                    </div>
+                </div>
+
+              
+
+                
+            </div>
+        </div>
+    </div>
+      <!-- =================Statistics section==================== -->
+
+
+<!-- =================card section==================== -->
+
+<div class="card_part">
+    <div class="container">
+        <div class="card_wrapper">
+            <div class="Card_one">
+               <div class="card_one_wrapper">
+                    <div class="buy_logo_div">
+                         <img src="../image/buy_button.png" alt="../image/buy_button.png">
+                    </div>
+                    <h4 class="Card_one_title">Buy a property</h4>
+                    <button class="card_one_btn" id="find-a-home">find a home</button>     
+               </div>
+               <img src="../image/Buy_card_image.png" alt="../image/Buy_card_image.png">
+               
+            </div>
+
+
+             <div class="Card_one two_card">
+               <div class="card_one_wrapper two--wrapper">
+                    <div class="buy_logo_div">
+                         <img src="../image/home_logo.png" alt="./Images/buy_button.png">
+                    </div>
+                    <h4 class="Card_one_title">Sell a property</h4>
+                    <button class="card_one_btn" id="register-land">Register Land</button>     
+               </div>
+               <img src="../image/sell_card_image.png" alt="./Images/Buy_card_image.png" class="sell_card_image">
+               
+            </div>
+
+             <div class="Card_one">
+               <div class="card_one_wrapper">
+                    <div class="buy_logo_div">
+                         <img src="../image/advertisement_button.png" alt="./Images/advertisement_button.png">
+                    </div>
+                    <h4 class="Card_one_title">Place a advertisement</h4>
+                    <button class="card_one_btn" id="place-a-add">Place add</button>     
+               </div>
+               <img src="../image/sell_card_image.png" alt="./Images/Buy_card_image.png">
+               
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =================card section==================== -->
+
+
+<!-- =================Sold  Property section==================== -->
+ <div class="Properties_part" id="sold-property">
+    <div class="container">
+        <h2 class="property_title">Our Recently Sold Properties</h2>
+        <div class="poperty_wrapper" id="all-sold-land">
+
+            
+        <!--  sample card
+         <div class="Property_card">
+                <img src="../image/property_home_three.png" alt="../image/property_home_one.png">
+                <div class="Property_card_info">
+                    <h4 class="Property_title">
+                        Dakkhin khan Land
+                    </h4>
+                    <div class="">
+                        <p class="Property_price"><i class="fa-light fa-tag"></i> <span class="price">80,00,000</span></p>
+                        <p class="location">Dakshin Khan Dhaka 1230</p>
+                        <p class="size"><i class="fa-regular fa-ruler-combined"></i> <span>6 Katha</span></p>
+                        <p class="location"><strong>Status</strong>: Sold</p>
+                    </div>
+                </div>
+
+            </div>  
+        -->
+            
+          
+
+        </div>
+        <div class="btn_div">
+            <button class="more_property_btn" id="all-sold-land-btn">learn more <span><i class="fa-light fa-square-arrow-up-right"></i></span></button>
+        </div>
+    </div>
+ </div>
+
+
+
+<!-- =================Available Property section==================== -->
+
+
+
+<div class="Properties_part" id="land-for-sell">
+    <div class="container">
+        <h2 class="property_title">Our Featured Properties</h2>
+        <div class="poperty_wrapper" id="all-property">
+
+           <!--   Sample for editor
+          
+           <div class="Property_card">
+                <img src="../image/property_home_one.png" alt="./Images/property_home_one.png">
+                <div class="Property_card_info">
+                    <h4 class="Property_title">
+                        Uttara central home
+                    </h4>
+                    <div class="">
+                        <p class="Property_price"><i class="fa-light fa-tag"></i> <span class="price">53,00,000</span></p>
+                        <p class="location">Ashiyan City Dhaka 1230 </p>
+                        <p class="size"><i class="fa-regular fa-ruler-combined"></i> <span>6 Katha</span></p>
+                    </div>
+                </div>
+
+            </div>
+            
+            -->
+
+        </div>
+        <div class="btn_div">
+            <button class="more_property_btn" id="all-available-land">learn more <span><i class="fa-light fa-square-arrow-up-right"></i></span></button>
+        </div>
+    </div>
+ </div>
+
+
+
+
+
+<!-- =================rent Property section==================== -->
+
+
+<div class="Right_house">
+    <div class="container">
+        <div class="house_wrapper">
+            <div class="house_left">
+                <h2 class="house_left_title">Let’s find the right selling option for you</h2>
+                <div class="house_sub_sec_wrapper">
+                    <div class="housesub_sec">
+                        <div>
+                            <img src="../image/property_management_logo.png" alt="../image/property_management_logo.png">
+                        </div>
+                        <div class="house_sub_summary">
+                            <h4 class="house_subSec_title">Property Management</h4>
+                            <p class="house_subSec_Subtitle">Nullam sollicitudin blandit eros eu pretium. Nullam maximus ultricies auctor.</p>
+                        </div>
+                    </div>
+
+                    <div class="housesub_sec">
+                        <div>
+                            <img src="../image/mortatage_serviece.png" alt="../image/property_management_logo.png">
+                        </div>
+                        <div class="house_sub_summary">
+                            <h4 class="house_subSec_title">Mortgage Services</h4>
+                            <p class="house_subSec_Subtitle">Nullam sollicitudin blandit eros eu pretium. Nullam maximus ultricies auctor.</p>
+                        </div>
+                    </div>
+
+                    <div class="housesub_sec">
+                        <div>
+                            <img src="../image/currency_serviece.png" alt="../image/property_management_logo.png">
+                        </div>
+                        <div class="house_sub_summary">
+                            <h4 class="house_subSec_title">Currency Services</h4>
+                            <p class="house_subSec_Subtitle">Nullam sollicitudin blandit eros eu pretium. Nullam maximus ultricies auctor.</p>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+            <div class="house_right">
+                <img src="../image/right_home_image.png" alt="">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- =================rent Property section==================== -->
+
+<!-- =====footer part========================= -->
+
+ <footer class="footer" id="contact">
+      <!-- Footer styles will still come from index.css -->
+      <div class="footer-content">
+        <div class="footer-column">
+          <div class="logo-footer">
+            <img
+              src="../image/logo.png"
+              alt="LandLister Logo"
+              style="height: 25px; margin-right: 8px"
+            />
+            <span> LAND LISTER</span>
+          </div>
+          <p class="contact-info">
+            <i class="far fa-envelope"></i> contact@landlister.com.bd
+          </p>
+          <p class="contact-info">
+            <i class="fas fa-phone-alt"></i> +880 17790XXXXX
+          </p>
+          <address>
+            The Fantastic Four <br />
+            Mirpur DOHS, Dhaka-1216<br />
+            Dhaka,Bangladesh
+          </address>
+        </div>
+        <div class="footer-column">
+          <h4 style="color: white">Quick links</h4>
+          <!-- Assuming index.css makes footer text light or we override here -->
+          <ul>
+            <li>
+              <a href="#" style="color: #eee; text-decoration: none"
+                >Buy Property</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #eee; text-decoration: none"
+                >Sell Property</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #eee; text-decoration: none"
+                >Popular Offers</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #eee; text-decoration: none"
+                >Terms of Service</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 style="color: white">Profile</h4>
+          <ul>
+            <li>
+              <a href="#" style="color: #eee; text-decoration: none"
+                >My account</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #eee; text-decoration: none"
+                >My listings</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #eee; text-decoration: none"
+                >Add listings</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #eee; text-decoration: none"
+                >Help center</a
+              >
+            </li>
+            <li>
+              <a href="#" style="color: #eee; text-decoration: none"
+                >Privacy policy</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Get exclusive advice</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 LandLister Bangladesh. All rights reserved.</p>
+      </div>
+    </footer>
+  
+
+<!-- =====footer part========================= -->
+
+
+
+
+
+
+
+
+
+
+<script  src="../JS/homepage.js" type="module"></script>
+
+
+
+    
+    
+</body>
+</html>

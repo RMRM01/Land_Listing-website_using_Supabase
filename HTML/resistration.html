@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Form</title>
+   <link rel="icon" href="../image/logo.png">
+  <!-- Elegant Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #0f3460;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #16213e;
+      padding: 30px 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    header h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #e94560;
+    }
+
+    header div {
+      margin-bottom: 15px;
+      
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: #f1f1f1;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #444;
+      background-color: #1a1a2e;
+      border-radius: 6px;
+      color: #f1f1f1;
+      transition: 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #e94560;
+      outline: none;
+      background-color: #22244c;
+    }
+
+    button {
+      width: 100%;
+      background-color: #e94560;
+      color: #fff;
+      padding: 12px;
+      border: 2px solid #e94560;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background-color: transparent;
+      transform: translateY(-2px);
+      font-weight: 600;
+    }
+    header p{ 
+      padding: 1rem;
+      text-align: center;
+    }
+ header p a{
+   color: red;
+   cursor: pointer;
+ }
+    @media (max-width: 480px) {
+      header {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h2>Registration Form</h2>
+    <div class="name">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name">
+    </div>
+    
+    <div>
+      <label for="f_name">Father's Name</label>
+      <input type="text" id="f_name" placeholder="Enter father's name">
+    </div>
+    
+    <div>
+      <label for="NID">NID</label>
+      <input type="text" id="NID" placeholder="Enter NID number">
+    </div>
+
+    <div>
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob">
+    </div>
+
+    <div>
+      <label for="m_n">Mobile No</label>
+      <input type="text" id="m_n" placeholder="Enter 10-digit number">
+    </div>
+    <div>
+      <label for="email">E-mail</label>
+      <input type="text" id="email" placeholder="Enter Your valid Email">
+    </div>
+
+     <div>
+      <label for="address">Present Address</label>
+      <input type="text" id="address" placeholder="Enter your present address">
+    </div>
+
+
+    <div>
+      <label for="pw">Password</label>
+      <input type="password" id="pw" placeholder="Create password">
+    </div>
+
+    <div>
+      <label for="pw2">Confirm Password</label>
+      <input type="password" id="pw2" placeholder="Confirm password">
+    </div>
+    <div>
+      <label for="profile-picture">Upload your profile picture</label>
+      <input type="file" id="profile-picture">
+    </div>
+    <button id="submit">Submit</button>
+    <p>Already Have Account? <a href="#">Log In</a></p>
+  </header>
+
+  <script src="../JS/reg.js" type="module">
+    
+  </script>
+</body>

@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+     font-family: 'Arial', sans-serif;
+    background-color: #1A1A2E;
+}
+
+.container{
+   
+    color: white;
+    margin: 10rem auto;
+    width: 95%;
+    text-align: center;
+    align-items: center;
+}
+.container div img{
+    height: 3rem;
+    width: 3rem;
+}
+.container div span{
+    font-size: 2.9rem ;
+}
+.CheckBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.CheckBox i{
+    margin-top: 9rem;
+    margin-bottom: 9rem;
+    margin-left: 6px;
+    margin-right: 6px;
+    font-size: 80px;
+    color: green;
+}
+.line{ 
+    
+    z-index: 10;
+    width: 40%;
+    height: 5px;
+    background-color: red;
+    border-radius: 1px;
+}
+.container .top{
+    
+    font-size: 2rem;
+    
+}
+.container .bottom{
+    margin: 1rem 0;
+    font-size: 2rem;
+    
+}
+.LoginAgain{
+    text-align: center;
+   
+}
+.LoginAgain a{
+    color: red;
+}
