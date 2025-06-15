@@ -213,3 +213,14 @@ function senddata() {
     localStorage.setItem("mobileNo",usermobileno);
 }
 
+
+// Onclick for sold land
+document.getElementById("all-sold-land").addEventListener("click", function(event) {
+    const target = event.target.closest(".Property_card");
+    if (target) {
+        const landId = target.dataset.id;
+        localStorage.setItem("landId", landId);
+        localStorage.setItem("mobileNo", usermobileno);
+        window.location.href = "../HTML/landinfo.html";
+    }
+});

@@ -5,14 +5,14 @@ import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js
   const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBpeW94am5oZXF4anVpcnN2amZoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg0ODkxNjksImV4cCI6MjA2NDA2NTE2OX0.3obYtWnE210mFbwWMhAF-k55i5IRSDV9PlF-fQqY1F8';
  
 const supabase = createClient(supabaseUrl, supabaseKey);
-//const usermobile=localStorage.getItem("mobileNo"); 
+const usermobile=localStorage.getItem("mobileNo"); 
 
 
-const usermobile="01779073101";
+//const usermobile="01779073101";
 
 
-//const landid= localStorage.getItem("landId"); 
-const landid= "3c3e7cc7-e67f-440d-98d2-1238b905a8c7"; 
+const landid= localStorage.getItem("landId"); 
+//const landid= "3c3e7cc7-e67f-440d-98d2-1238b905a8c7"; 
 
 alert(landid);
 
@@ -120,7 +120,11 @@ async function getownerdata(){
     }
     
 }
-
+document.getElementById("view-profile-btn").addEventListener("click", function(e){
+e.preventDefault();
+localStorage.setItem("mobileNo",registermobile);
+window.location.href="../HTML/ownerInfo.html";
+});
 getownerdata();
 
   document.addEventListener("DOMContentLoaded", function () {
