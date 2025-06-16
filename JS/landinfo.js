@@ -60,18 +60,20 @@ if(data.type == "Agricultural")
 }
 else{
   heading= "Premium " + data.type +" in " + data.location;
-}
-
+}  
+ 
         price=data.price;
         amount=data.landamount;
       
         type=data.type;
        facing=data.facing;
        const locationinmap=document.getElementById("locationinmap");
-       const encodedLocation = encodeURIComponent(location);
+       const encodedLocation = encodeURIComponent(data.location);
        locationinmap.src=`https://www.google.com/maps?q=${encodedLocation}&output=embed`;
        document.getElementById("property-price").innerHTML = price;
        document.getElementById("property-title-main").innerHTML = heading;
+       document.getElementById("property-location").innerHTML = data.location;
+       document.getElementById("property-location-onmap").innerHTML += data.location;
        document.getElementById("property-area").innerHTML = amount ;
        document.getElementById("property-area-details").innerHTML = amount ;
        document.getElementById("property-type").innerHTML = type;

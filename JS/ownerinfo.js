@@ -166,6 +166,9 @@ if (listings.length === 0) {
 
 getlanddata();
 
+// get statistics of user 
+
+
 
 async function getstatistics(){
    let numberoflistedland=0;
@@ -207,6 +210,54 @@ else{
 
 getstatistics();
 
+async function getexperience()
+{
+     const{ data, error }= await supabase
+    .from("users")
+    .select("time")
+    .eq("mobile", mobileNo)
+    .single();
+   
+
+    if(error)
+    {
+        alert("find No data", error);
+    }
+    else{
+    const time=new Date(data.time);
+    const year=time.getFullYear();
+    const month=time.getMonth();
+    const day=time.getDate();
+    const currenttime=new Date();
+    const cyear=currenttime.getFullYear();
+    const cmonth=currenttime.getMonth();
+    const cday=currenttime.getDate();
+    let dyear=cyear-year;
+    let dmonth=cmonth-month;
+    let dday=cday-day;
+    if(dyear == 0)
+    {
+      if(dmonth < 12)
+      {
+        document.getElementById("experience").innerText=dmonth+1;
+        document.getElementById("unit").innerText="Months";
+      }
+      else{
+         document.getElementById("experience").innerText=1;
+      }
+    }
+  else{
+    document.getElementById("experience").innerText=dyear+1;
+    
+  }
+    
+    console.log(time.toLocaleString()+ currenttime.toLocaleString());
+    
+}
+}
+
+
+getexperience();
 
 async function  soldlandtable(id, buyermobile) {
   const { data, error } = await supabase

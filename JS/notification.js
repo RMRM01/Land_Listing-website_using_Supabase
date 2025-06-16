@@ -52,7 +52,23 @@ document.getElementById("user-id").addEventListener("click", function() {
 
 });
 
+function gettime(time){
+let hours=time.getHours();
+const minut=time.getMinutes();
+const second=time.getSeconds();
 
+let ampm;
+if(hours>= 12)
+{
+    ampm="PM";
+}
+else{
+    ampm="AM";
+}
+hours=(hours-6)%12;
+
+return hours+":"+minut+":"+second+" "+ampm;
+}
 
 async function fetchNotifications() {
     const { data, error } = await supabase
@@ -75,13 +91,14 @@ async function fetchNotifications() {
           data.forEach(notification => {
     const listItem = document.createElement("div");
     listItem.className = "notification";
-
+   const time=gettime(new Date(notification.created_at));
+   alert(time);
     listItem.innerHTML = `
         <h3>Customer Contact Request</h3>
         <p>${notification.message}</p>
-        <span class="time">${new Date(notification.created_at).toLocaleString()}</span>
+        <span class="time">${new Date(notification.created_at).toLocaleDateString()} ${time.toString()} </span>
     `;
-
+    
     notificationList.appendChild(listItem);
 });
 
