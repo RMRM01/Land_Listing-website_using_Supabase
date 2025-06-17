@@ -17,6 +17,7 @@ let username=document.getElementById("user-name");
 
 
 let type,price,amount,location,facing,name;
+// get user data
 
 
 async function getusererdata(){
@@ -47,10 +48,13 @@ localStorage.setItem("mobileNo",usermobile);
 
 getusererdata();
 
+// get land data 
+
 async function getlanddata(){
     const{ data, error }= await supabase
     .from("landinfo")
-    .select("pictureofland,location,price,landamount,registermobile,id,type");
+    .select("pictureofland,location,price,landamount,registermobile,id,type,status")
+    .eq("status","Available");
    
 
     if(error)

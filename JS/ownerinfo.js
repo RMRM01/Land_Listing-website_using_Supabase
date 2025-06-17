@@ -168,6 +168,7 @@ getlanddata();
 
 // get statistics of user 
 
+//grt statistics
 
 
 async function getstatistics(){
@@ -209,6 +210,10 @@ else{
 }
 
 getstatistics();
+
+
+// get experience 
+
 
 async function getexperience()
 {
@@ -403,7 +408,7 @@ newland.innerHTML=`   <div class="listing-image">
 
 
 
-
+  
 
 // load bought land data
 async function loadBoughtLandData() {
