@@ -9,6 +9,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+   <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+    >
     <link rel="stylesheet" href="../CSS/AddLandForSell.css">
 </head>
 <body> 
@@ -25,19 +33,19 @@
         </div>
         <nav>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#properties">Land For Sell</a></li>
-            <li><a href="#">Flat For Sell</a></li>
-            <li><a href="index.html#about">About Us</a></li>
-            <li><a href="index.html#contact">Help</a></li>
+            <li><a href="../HTML/index.html">Home</a></li>
+            <li><a href="../HTML/index.html#land-for-sell">Land For Sell</a></li>
+            <li><a href="../HTML/index.html#sold-property">Sold Properties</a></li>
+            <li><a href="../HTML/about.html" onclick="senddata();">About Us</a></li>
+            <li><a href="../HTML/HelpPage.html" onclick="senddata();">Help</a></li>
           </ul>
         </nav>
         <div class="header-actions">
     
-          <span class="icon user-name"
+          <span class="icon user-name" id="user-name"
             ><i class="far fa-user-circle"></i> <span id="navbar-name">Rifat</span></span
           >
-          <!-- MODIFIED: Removed inline style for color from Log Out link -->
+          <span class="icon-notification" id="notification"> <i class="fa-solid fa-bell"> </i></span>
           <span class="icon">
             <a href="../HTML/logOut.html" class="nav-link"><i class="fas fa-sign-out-alt"></i> Log Out</a>
           </span

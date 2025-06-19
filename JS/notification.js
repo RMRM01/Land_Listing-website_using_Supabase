@@ -75,7 +75,8 @@ async function fetchNotifications() {
         .from("notifications")
         .select("*")
         .eq("registerer_mobile", usermobileno)
-        .eq("is_read", "FALSE");
+        .eq("is_read", "FALSE")
+        .order('created_at', { ascending: false });
 
 
     if (error) {
@@ -96,6 +97,7 @@ async function fetchNotifications() {
     listItem.innerHTML = `
         <h3>Customer Contact Request</h3>
         <p>${notification.message}</p>
+        <p>${notification.buyer_mobile}</p>
         <span class="time">${new Date(notification.created_at).toLocaleDateString()} ${time.toString()} </span>
     `;
     

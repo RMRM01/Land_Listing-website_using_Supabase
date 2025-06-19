@@ -114,6 +114,16 @@ nav ul li a:hover, nav ul li a.active {
     text-decoration: underline;
 }
 
+.icon-notification {
+    color: white;
+    
+    transition: all 0.3s ease-in-out;
+}
+
+.icon-notification:hover {
+    color: red;
+    cursor: pointer;
+}
 
 /* end of Nav bar */
 
