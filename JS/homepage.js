@@ -111,7 +111,7 @@ document.getElementById("logout-btn").addEventListener("click", function() {
 async function getfewavaiableland(){
   const {data, error}= await supabase
  .from("landinfo")
-    .select("pictureofland,location,price,landamount,registermobile,id");
+    .select("pictureofland,location,price,landamount,registermobile,id,type");
    
 
     if(error)
@@ -122,6 +122,15 @@ async function getfewavaiableland(){
 
  for(let i=0;i<data.length && i<3;i++) {
 
+
+    let heading;
+if(data[i].type == "Agricultural")
+{
+  heading= "Premium Agricultural Land For sell in " + data[i].location;
+}
+else{
+  heading= "Premium " + data[i].type +" For sell in " + data[i].location;
+}
     
 const newland=document.createElement("div");
 newland.className="Property_card";
@@ -132,7 +141,7 @@ newland.dataset.id= landid.toString();
 newland.innerHTML=`  <img src="${data[i].pictureofland}" alt="Pictur of Land">
                 <div class="Property_card_info">
                     <h4 class="Property_title">
-                        ${data[i].location}
+                        ${heading} 
                     </h4>
                     <div class="">
                         <p class="Property_price"><i class="fa-light fa-tag"></i> <span class="price">${data[i].price} Taka</span></p>
