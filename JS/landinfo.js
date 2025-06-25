@@ -14,7 +14,7 @@ const usermobile=localStorage.getItem("mobileNo");
 const landid= localStorage.getItem("landId"); 
 //const landid= "3c3e7cc7-e67f-440d-98d2-1238b905a8c7"; 
 
-alert(landid);
+//alert(landid);
 
 
 
@@ -50,7 +50,7 @@ async function getlanddata(){
 
     if(error)
     {
-        alert("find No data", error);
+        console.error("find No data", error);
     }
     else{
         let heading;

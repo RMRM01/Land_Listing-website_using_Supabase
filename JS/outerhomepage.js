@@ -9,25 +9,9 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 const usermobileno = localStorage.getItem("mobileNo");
 
 //const usermobileno = "01779073101"; // Example mobile number for testing
-// alert(usermobileno);
+//alert(usermobileno);
 
 // Hero section 
-// Search functionality
-document.getElementById("searchButton").addEventListener("click", function() {
-    const searchInput = document.getElementById("searchInput").value.trim();
-    const searchlocation = document.getElementById("location").value.trim();
-
-    alert(searchInput);
-    alert(searchlocation);
-    if( searchInput === "" && searchlocation === "") {
-        alert("Please enter a search term or location.");
-        return;
-    }
-    else{
-          
-    }
-});
-
 
 const findAHome=document.getElementById("find-a-home");
 const placeAAdd=document.getElementById("place-a-add");
@@ -68,12 +52,6 @@ soldLandList.addEventListener("click", () => {
 }); 
 
 
-// notification
-
-document.getElementById("notification").addEventListener("click", function() {
-  window.location.href = "../HTML/notification.html";
-  localStorage.setItem("mobileNo", usermobileno);
-});
 
 
 
@@ -249,5 +227,7 @@ document.getElementById("all-sold-land").addEventListener("click", function(even
         window.location.href = "../HTML/landinfo.html";
     }
 });
+
+
 
 

@@ -160,6 +160,7 @@ header .header-actions .icon a i {
   color: #eee;
   font-size: 1.05em;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 .owner-contact-details span a{
   color: #eee;
@@ -455,6 +456,14 @@ header .header-actions .icon a i {
   color: #888 !important;
   font-size: 0.85em;
 }
+
+#owner-page-phone {
+  white-space: pre-wrap;   /* ✅ keeps spaces and wraps lines */
+  word-wrap: break-word;   /* ✅ breaks long words if needed */
+  overflow-wrap: break-word; /* ✅ extra safe for overflow */
+  max-width: 100%;         /* Or set a specific width */
+}
+
 
 /* ===================================================================== */
 /* END: Dark Theme Footer Styles (Even Darker Version)                   */

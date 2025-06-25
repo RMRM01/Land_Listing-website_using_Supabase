@@ -8,8 +8,14 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 const usermobileno = localStorage.getItem("mobileNo");
 
-//const usermobileno = "01779073101"; // Example mobile number for testing
-alert(usermobileno);
+ // const usermobileno = "01779073101"; // Example mobile number for testing
+//alert(usermobileno);
+
+
+
+
+
+
 
 async function fetchUserData() {
     const {data, error}= await supabase

@@ -7,7 +7,7 @@
 const supabase = createClient(supabaseUrl, supabaseKey);
   const mobileNo=localStorage.getItem("mobileNo");
    // const mobileNo="01779073103";
-alert(mobileNo);
+   // alert(mobileNo);
     const submitBtn = document.getElementById("button");
 
     submitBtn.addEventListener("click", async function (event) {

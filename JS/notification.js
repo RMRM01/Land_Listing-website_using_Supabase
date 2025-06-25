@@ -8,7 +8,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 const usermobileno=localStorage.getItem("mobileNo");
 //const usermobileno="01779073103";
-alert(usermobileno);
+//alert(usermobileno);
 async function fetchUserData() {
     const {data, error}= await supabase
     .from("users")
@@ -80,7 +80,7 @@ async function fetchNotifications() {
 
 
     if (error) {
-        alert("Error fetching notifications:" + error);
+       // alert("Error fetching notifications:" + error);
         console.error("Error fetching notifications:" , error);
     } else {
         const notificationList = document.getElementById("container");
@@ -93,7 +93,7 @@ async function fetchNotifications() {
     const listItem = document.createElement("div");
     listItem.className = "notification";
    const time=gettime(new Date(notification.created_at));
-   alert(time);
+   //alert(time);
     listItem.innerHTML = `
         <h3>Customer Contact Request</h3>
         <p>${notification.message}</p>

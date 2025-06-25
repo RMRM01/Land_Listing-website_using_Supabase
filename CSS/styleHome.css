@@ -164,6 +164,7 @@ header nav ul li a.active {
   font-family: var(--Inter);
   font-size: 15px;
   color: var(--text_color_light);
+  cursor: pointer;
 }
 .header-actions .icon a {
   color: var(--text_color_light);

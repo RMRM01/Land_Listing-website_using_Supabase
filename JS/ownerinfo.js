@@ -11,13 +11,16 @@ const mobileNo = localStorage.getItem("mobileNo");
 
  //const mobileNo="01779073103"; // Example mobile number for testing
 
- alert(mobileNo);
+// alert(mobileNo);
+
  const profilename=document.getElementById("owner-page-name");
  const navbarname=document.getElementById("navbar-name");
  const profileemail=document.getElementById("owner-page-email");
  const profilemobile=document.getElementById("owner-page-phone");
  const profileaddress=document.getElementById("owner-location");
  const profilepicture=document.getElementById("owner-profile-picture");
+ const ownerAbout=document.getElementById("owner-bio-text");
+ ownerAbout.innerText='';
  profilemobile.innerHTML="+88"+mobileNo;
 
 
@@ -41,6 +44,30 @@ const mobileNo = localStorage.getItem("mobileNo");
     profilepicture.src=data.profilepicture;
     profilepicture.alt=data.name;
     navbarname.innerHTML=data.name;
+    const aboutText = data.about;
+    let i = 0;
+    let j=0;
+
+function typeWriter() {
+  
+  if (i < aboutText.length) {
+    const char= aboutText[i];
+   if (char === '\n' || j >= 135) {
+      ownerAbout.innerHTML += '-'+'<br>'; // line break
+      ownerAbout.innerHTML += `${char}`;
+      j=0;
+    } else if (char === ' ') {
+      ownerAbout.innerHTML += '&nbsp;'; // preserve space
+    } else {
+      ownerAbout.innerHTML += char; // normal character
+    }
+    i++;
+    j++;
+    setTimeout(typeWriter, 30); // delay for typing effect
+  }
+}
+
+typeWriter();
   }
 }
 

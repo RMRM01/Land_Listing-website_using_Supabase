@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Page</title>
+  <style>
+    body {
+      background: #f4f6f8;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 500px;
+      margin: 60px auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 40px 30px;
+    }
+    .title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 24px;
+      color: #333;
+    }
+    .search-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .search-input {
+      flex: 1;
+      padding: 10px 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.2s;
+    }
+    .search-input:focus {
+      border-color: #0078d7;
+    }
+    .search-btn {
+      padding: 10px 22px;
+      background: #0078d7;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .search-btn:hover {
+      background: #005fa3;
+    }
+    .search-suggestion{
+      display: block;
+      display: flex;
+      flex-direction: column;
+
+    }
+    .suggestion{
+      text-decoration: none;
+      padding: 2px;
+      background-color: red;
+      margin: 1px 0;
+      color: #000;
+    }
+    .search-results {
+        display: none;
+      margin-top: 30px;
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 5px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .search-result {
+      margin-top: 24px;
+      min-height: 40px;
+      color: #666;
+      font-size: 1.1rem;
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Search</h1>
+    
+      <div class="search-section">
+        <input type="text" class="search-input" id="searchInput" placeholder="Type to search...">
+      <button class="search-btn" type="submit" id="searchButton">Search</button>
+
+      </div>
+    <div class="search-suggestion"> 
+ <a href="" class="suggestion"> af</a>
+ <a href="" class="suggestion"> af</a>
+ <a href="" class="suggestion"> af</a>
+    </div>
+      <div class="search-results" id="searchResultsContainer">
+        
+        <h1 class="title">Search Results</h1>
+         <ul class="search-result" id="searchResults"></ul>
+      </div>
+  </div>
+  <script  src="../JS/search.js " type="module"> </script>
+</body>
+</html>

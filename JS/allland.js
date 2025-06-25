@@ -119,7 +119,7 @@ document.querySelector("#add-property-btn").addEventListener("click", addpropert
   const card = e.target.closest(".Property_card");
   if (card) {
     const landid = card.dataset.id;
-    alert(landid);
+   // alert(landid);
     localStorage.setItem("landid", landid);
     window.location.href = "../HTML/landinfo.html";
   }

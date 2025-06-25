@@ -165,12 +165,17 @@ nav ul li a:hover, nav ul li a.active {
 /* footer css */
 /* Footer */
 .footer{
+ 
     margin: 0 !important;
+    
 }
 .footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
+   position: relative;
+  position: fixed;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
     padding: 1rem 3rem;
     background-color: #1A1A2E;
     width: 100%;
@@ -232,6 +237,9 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .footer .footer-bottom {
+    position: relative;
+  position: fixed;
+  bottom: 0;
   text-align: center;
   padding-top: 20px;
   
