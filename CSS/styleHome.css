@@ -196,39 +196,7 @@ header nav ul li a.active {
     cursor: pointer;
 }
 /* Header CSS End (Global) */
-/* Search Bar CSS Start (Global) */
-.search-results-container {
-  display: none;
-  margin: 0 auto;
-  width: 100%;
- max-width: 450px;
- min-width: 320px;
- padding: 0 20px;
-  background-color: white;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  color: #333;
-  z-index: 1000;
-}
-.search-result-list {
-  
-  list-style: none;
-  padding: 2px 0;
-  margin: 0;
-}
-.search-result-list li{
-  cursor: pointer;
-  background-color: antiquewhite;
-  margin: 3px 0;
-  border-radius: 3px;
-  padding: 0px 5px;
-  
-}
 
-.search-result-list li:hover {
-  background-color: rgb(248, 102, 102);
-  color: white;
-}
 
 /* Footer CSS Start (Global) */
 .footer {
@@ -418,6 +386,7 @@ header nav ul li a.active {
 .banner_text_content {
   width: 100%;
   margin-bottom: 40px;
+
 }
 
 .banner_title {
@@ -430,7 +399,8 @@ header nav ul li a.active {
   text-align: right;
   margin-left: auto;
   margin-right: 0;
-  color: var(--theme_dark_tertiary);
+  color: var(--text_color_dark_emphasis);
+  
 }
 
 .banner_subtitle {
@@ -446,6 +416,7 @@ header nav ul li a.active {
 }
 
 .Hero_search_div {
+  position: relative;
   display: flex;
   align-items: center;
   margin: 0 auto;
@@ -456,7 +427,42 @@ header nav ul li a.active {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   z-index: 2;
 }
+/* Search Bar CSS Start (Global) */
+.search-results-container {
+  display: none;
+ 
+  width: 100%;
+    overflow-y: auto; /* scroll if too tall */
+  margin: 0 auto;
+  width: 100%;
+ max-width: 450px;
+ min-width: 320px;
+ padding: 0 20px;
+  background-color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #333;
+  z-index: 1000;
+}
+.search-result-list {
+  
+  list-style: none;
+  padding: 2px 0;
+  margin: 0;
+}
+.search-result-list li{
+  cursor: pointer;
+  background-color: antiquewhite;
+  margin: 3px 0;
+  border-radius: 3px;
+  padding: 0px 5px;
+  
+}
 
+.search-result-list li:hover {
+  background-color: rgb(248, 102, 102);
+  color: white;
+}
 .Hero_search_div img:first-child {
   margin-right: 10px;
   height: 24px;
