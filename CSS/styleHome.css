@@ -196,6 +196,37 @@ header nav ul li a.active {
     cursor: pointer;
 }
 /* Header CSS End (Global) */
+/* Search Bar CSS Start (Global) */
+.search-results-container {
+  margin: 0 auto;
+  width: 100%;
+ max-width: 450px;
+ min-width: 320px;
+ padding: 0 20px;
+  background-color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #333;
+  z-index: 1000;
+}
+.search-result-list {
+  display: none;
+  list-style: none;
+  padding: 2px 0;
+  margin: 0;
+}
+.search-result-list li{
+  cursor: pointer;
+  background-color: antiquewhite;
+  margin: 3px 0;
+  border-radius: 3px;
+  padding: 0px 5px;
+  
+}
+
+.search-result-list li:hover {
+  background-color: #f0e68c;
+}
 
 /* Footer CSS Start (Global) */
 .footer {

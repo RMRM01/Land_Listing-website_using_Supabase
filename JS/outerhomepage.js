@@ -56,34 +56,6 @@ soldLandList.addEventListener("click", () => {
 
 
 
-async function fetchUserData() {
-    const {data, error}= await supabase
-    .from("users")
-    .select("name")
-    .eq("mobile",usermobileno)
-    .single();
-    if (error) {
-        console.error("Error fetching user data:", error);
-    } 
-
-    else {
-        document.getElementById("user-name").innerText = data.name;
-    }
-}
-
-fetchUserData();
-
-// go to owner page
-
-
-document.getElementById("user-name").addEventListener("click", function() {
-   window.location.href = "../HTML/ownerinfo.html";
-    localStorage.setItem("mobileNo", usermobileno);
-
-});
-
-
-
 // JavaScript for Land Registration Page
 
 document.getElementById("add-property-btn").addEventListener("click", function() {
@@ -93,12 +65,6 @@ document.getElementById("add-property-btn").addEventListener("click", function()
 });
 
 
-// JavaScript for log out Page
-document.getElementById("logout-btn").addEventListener("click", function() {
-   window.location.href = "../HTML/LogOut.html";
-  
-
-});
 
 // get few avaiable land
 
