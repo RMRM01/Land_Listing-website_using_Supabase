@@ -113,7 +113,7 @@ nav ul li a:hover, nav ul li a.active {
 url
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../image/family-homepage.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../image/Forhomepage.jpg') no-repeat center center/cover;
     color: white;
     padding: 100px 20px;
     text-align: center;
