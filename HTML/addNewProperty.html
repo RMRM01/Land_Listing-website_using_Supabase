@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Property - LandLister</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="../CSS/addNewProperty.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <style>
+      body {
+        background: linear-gradient(to right, #0f3460, #16213e);
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img
+            src="../image/logo.png"
+            alt="LandLister Logo"
+            style="height: 40px; margin-right: 10px"
+          />
+          <span>LandLister</span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../htmls/myAccount.html">My Account</a></li>
+            <li><a href="../index.html#properties">Properties</a></li>
+            <li><a href="../htmls/about.html">About Us</a></li>
+            <li><a href="../htmls/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <!-- <a href="../htmls/addNewProperty.html" class="add-property-btn">
+              <i class="fas fa-plus-circle"></i> Add property</a> -->
+          <span class="icon user-name">
+            <a href="../htmls/ownerInfo.html" title="View My Public Profile">
+              <i class="far fa-user-circle"></i> Megh
+            </a>
+          </span>
+          <span class="icon">
+            <a href="#" title="Log Out">
+              <i class="fas fa-sign-out-alt"></i> Log Out</a
+            >
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <div class="container page-content">
+      <section class="add-property-section">
+        <h1 class="page-title">List Your Land Property</h1>
+        <p class="page-subtitle">
+          Fill in the details below to create a new listing.
+        </p>
+
+        <form id="addPropertyForm" class="property-form">
+          <div class="form-section">
+            <h2 class="form-section-title">
+              <i class="fas fa-info-circle"></i> Basic Information
+            </h2>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="propertyTitle"
+                  >Property Title / Headline
+                  <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="propertyTitle"
+                  name="propertyTitle"
+                  placeholder="e.g., Prime Residential Plot in Uttara"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="propertyType"
+                  >Property Type <span class="required">*</span></label
+                >
+                <select id="propertyType" name="propertyType" required>
+                  <option value="">Select Type...</option>
+                  <option value="residential_plot">Residential Plot</option>
+                  <option value="commercial_land">Commercial Land</option>
+                  <option value="agricultural_land">Agricultural Land</option>
+                  <option value="industrial_land">Industrial Land</option>
+                  <option value="mixed_use_land">Mixed-Use Land</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="propertyDescription"
+                >Description <span class="required">*</span></label
+              >
+              <textarea
+                id="propertyDescription"
+                name="propertyDescription"
+                rows="5"
+                placeholder="Describe your property in detail..."
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2 class="form-section-title">
+              <i class="fas fa-map-marked-alt"></i> Location Details
+            </h2>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="propertyAddress"
+                  >Full Address <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="propertyAddress"
+                  name="propertyAddress"
+                  placeholder="e.g., Road 12, Sector 6, Uttara"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="propertyCity"
+                  >City / Area <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="propertyCity"
+                  name="propertyCity"
+                  placeholder="e.g., Dhaka"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="propertyZip">Postal Code / Zip</label>
+                <input
+                  type="text"
+                  id="propertyZip"
+                  name="propertyZip"
+                  placeholder="e.g., 1230"
+                />
+              </div>
+              <div class="form-group">
+                <label for="googleMapsLink">Google Maps Link (Optional)</label>
+                <input
+                  type="url"
+                  id="googleMapsLink"
+                  name="googleMapsLink"
+                  placeholder="https://maps.google.com/..."
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2 class="form-section-title">
+              <i class="fas fa-ruler-combined"></i> Land Specifications
+            </h2>
+            <div class="form-grid two-col-tight">
+              <div class="form-group">
+                <label for="landAreaValue"
+                  >Land Area Value <span class="required">*</span></label
+                >
+                <input
+                  type="number"
+                  id="landAreaValue"
+                  name="landAreaValue"
+                  placeholder="e.g., 5"
+                  required
+                  min="0"
+                  step="any"
+                />
+              </div>
+              <div class="form-group">
+                <label for="landAreaUnit"
+                  >Area Unit <span class="required">*</span></label
+                >
+                <select id="landAreaUnit" name="landAreaUnit" required>
+                  <option value="">Select Unit...</option>
+                  <option value="Katha">Katha</option>
+                  <option value="Bigha">Bigha</option>
+                  <option value="Acre">Acre</option>
+                  <option value="Decimal">Decimal</option>
+                  <option value="Sq.Ft.">Sq.Ft.</option>
+                  <option value="Sq.Meter">Sq.Meter</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="landFacing">Facing</label>
+                <select id="landFacing" name="landFacing">
+                  <option value="">Select Facing...</option>
+                  <option value="North">North</option>
+                  <option value="South">South</option>
+                  <option value="East">East</option>
+                  <option value="West">West</option>
+                  <option value="North-East">North-East</option>
+                  <option value="North-West">North-West</option>
+                  <option value="South-East">South-East</option>
+                  <option value="South-West">South-West</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="roadAccess">Road Access</label>
+                <input
+                  type="text"
+                  id="roadAccess"
+                  name="roadAccess"
+                  placeholder="e.g., 20 ft wide road"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2 class="form-section-title">
+              <i class="fas fa-dollar-sign"></i> Pricing
+            </h2>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="propertyPrice"
+                  >Asking Price (BDT) <span class="required">*</span></label
+                >
+                <input
+                  type="number"
+                  id="propertyPrice"
+                  name="propertyPrice"
+                  placeholder="e.g., 5500000"
+                  required
+                  min="0"
+                />
+              </div>
+              <div class="form-group">
+                <label for="priceNegotiable">Price Negotiable?</label>
+                <select id="priceNegotiable" name="priceNegotiable">
+                  <option value="yes">Yes</option>
+                  <option value="no" selected>No</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2 class="form-section-title">
+              <i class="fas fa-camera"></i> Property Images
+            </h2>
+            <div class="form-group">
+              <label for="propertyImages"
+                >Upload Images (Select multiple)</label
+              >
+              <input
+                type="file"
+                id="propertyImages"
+                name="propertyImages[]"
+                accept="image/*"
+                multiple
+              />
+              <small
+                >Recommended: High-quality JPG or PNG images. Max 5MB per image.
+                (Min 1, Max 10 images)</small
+              >
+              <div
+                id="imagePreviewContainer"
+                class="image-preview-container"
+              ></div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2 class="form-section-title">
+              <i class="fas fa-check-circle"></i> Features & Amenities
+            </h2>
+            <div class="form-group">
+              <label>Select applicable features:</label>
+              <div class="checkbox-grid">
+                <label class="checkbox-item"
+                  ><input
+                    type="checkbox"
+                    name="features[]"
+                    value="good_road_access"
+                  />
+                  Good Road Access</label
+                >
+                <label class="checkbox-item"
+                  ><input
+                    type="checkbox"
+                    name="features[]"
+                    value="utility_connections"
+                  />
+                  Utility Connections Nearby</label
+                >
+                <label class="checkbox-item"
+                  ><input
+                    type="checkbox"
+                    name="features[]"
+                    value="ready_development"
+                  />
+                  Ready for Development</label
+                >
+                <label class="checkbox-item"
+                  ><input
+                    type="checkbox"
+                    name="features[]"
+                    value="clearly_demarcated"
+                  />
+                  Clearly Demarcated</label
+                >
+                <label class="checkbox-item"
+                  ><input
+                    type="checkbox"
+                    name="features[]"
+                    value="secure_area"
+                  />
+                  Secure Area</label
+                >
+                <label class="checkbox-item"
+                  ><input
+                    type="checkbox"
+                    name="features[]"
+                    value="close_to_amenities"
+                  />
+                  Close to Amenities</label
+                >
+                <label class="checkbox-item"
+                  ><input
+                    type="checkbox"
+                    name="features[]"
+                    value="boundary_wall"
+                  />
+                  Boundary Wall</label
+                >
+                <label class="checkbox-item"
+                  ><input
+                    type="checkbox"
+                    name="features[]"
+                    value="corner_plot"
+                  />
+                  Corner Plot</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-submit-listing">
+              <i class="fas fa-paper-plane"></i> Submit Listing
+            </button>
+            <button type="reset" class="btn btn-reset-form">
+              <i class="fas fa-undo"></i> Reset Form
+            </button>
+            <a href="myAccount.html" class="btn btn-cancel">Cancel</a>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <footer class="footer" id="contact">
+      <div class="footer-content container">
+        <div class="footer-column">
+          <div class="logo-footer">
+            <img
+              src="../image/logo.png"
+              alt="LandLister Logo"
+              style="height: 30px; margin-right: 8px"
+            />
+            LAND LISTER
+          </div>
+          <p class="contact-info">
+            <i class="far fa-envelope"></i> contact@landlister.com.bd
+          </p>
+          <p class="contact-info">
+            <i class="fas fa-phone-alt"></i> +880 1779073101
+            
+          </p>
+          <address>
+            The Fantastic Four <br />
+            Mirpur DOHS, Dhaka-1216<br />
+            Dhaka,Bangladesh
+          </address>
+        </div>
+        <div class="footer-column">
+          <h4 style="color: white">Quick links</h4>
+          <ul>
+            <li><a href="#">Buy Property</a></li>
+            <li><a href="#">Sell Property</a></li>
+            <li><a href="#">Popular Offers</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 style="color: white">Profile</h4>
+          <ul>
+            <li><a href="../htmls/myAccount.html">My account</a></li>
+            <li><a href="#">My listings</a></li>
+            <li><a href="#">Add listings</a></li>
+            <li><a href="#">Help center</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Get exclusive advice</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <p>© 2025 LandLister Bangladesh. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const propertyImagesInput = document.getElementById("propertyImages");
+      const imagePreviewContainer = document.getElementById(
+        "imagePreviewContainer"
+      );
+
+      if (propertyImagesInput && imagePreviewContainer) {
+        propertyImagesInput.addEventListener("change", function (event) {
+          imagePreviewContainer.innerHTML = "";
+          const files = event.target.files;
+          if (files.length > 0) {
+            const previewLabel = document.createElement("p");
+            previewLabel.textContent = "Selected Image Previews:";
+            previewLabel.style.marginBottom = "10px";
+            previewLabel.style.fontWeight = "500";
+            imagePreviewContainer.appendChild(previewLabel);
+          }
+          for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            if (file.type.startsWith("image/")) {
+              const reader = new FileReader();
+              reader.onload = function (e) {
+                const img = document.createElement("img");
+                img.src = e.target.result;
+                img.alt = "Preview";
+                img.style.maxWidth = "100px";
+                img.style.maxHeight = "100px";
+                img.style.margin = "5px";
+                img.style.borderRadius = "4px";
+                img.style.border = "1px solid #2d2f5a";
+                imagePreviewContainer.appendChild(img);
+              };
+              reader.readAsDataURL(file);
+            }
+          }
+        });
+      }
+
+      const addPropertyForm = document.getElementById("addPropertyForm");
+      if (addPropertyForm) {
+        addPropertyForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert("Property listing submitted! (This is a frontend demo)");
+        });
+      }
+    </script>
+  </body>
+</html>

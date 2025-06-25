@@ -13,20 +13,50 @@ const usermobileno = localStorage.getItem("mobileNo");
 
 // Hero section 
 // Search functionality
-document.getElementById("searchButton").addEventListener("click", function() {
-    const searchInput = document.getElementById("searchInput").value.trim();
-    const searchlocation = document.getElementById("location").value.trim();
+document.getElementById("searchInput").addEventListener("input", async function () {
+  const searchInput = this.value.trim();
+  const searchLocation = document.getElementById("location").value.trim();
+  const searchResultsContainer = document.getElementById("searchResultsContainer");
+  const resultsContainer = document.getElementById("searchResultList");
 
-    alert(searchInput);
-    alert(searchlocation);
-    if( searchInput === "" && searchlocation === "") {
-        alert("Please enter a search term or location.");
-        return;
-    }
-    else{
-          
-    }
+  // Clear previous results
+  resultsContainer.innerHTML = "";
+
+  if (searchInput === "" && searchLocation === "") {
+    searchResultsContainer.style.display = "none";
+    return;
+  }
+
+  // Query Supabase
+  const { data, error } = await supabase
+    .from('landinfo')
+    .select('*')
+    .ilike('location', `%${searchInput}%`);
+
+  if (error) {
+    console.error('Error fetching user data:', error);
+    return;
+  }
+
+  searchResultsContainer.style.display = "block";
+
+  if (data.length > 0) {
+    data.forEach(user => {
+      const li = document.createElement("li");
+      li.textContent = user.location;
+      li.addEventListener("click", function () {
+        document.getElementById("searchInput").value = user.location;
+        searchResultsContainer.style.display = "none";
+      });
+      resultsContainer.appendChild(li);
+    });
+  } else {
+    const li = document.createElement("li");
+    li.textContent = "No results found";
+    resultsContainer.appendChild(li);
+  }
 });
+
 
 
 const findAHome=document.getElementById("find-a-home");

@@ -198,6 +198,7 @@ header nav ul li a.active {
 /* Header CSS End (Global) */
 /* Search Bar CSS Start (Global) */
 .search-results-container {
+  display: none;
   margin: 0 auto;
   width: 100%;
  max-width: 450px;
@@ -210,7 +211,7 @@ header nav ul li a.active {
   z-index: 1000;
 }
 .search-result-list {
-  display: none;
+  
   list-style: none;
   padding: 2px 0;
   margin: 0;
@@ -225,7 +226,8 @@ header nav ul li a.active {
 }
 
 .search-result-list li:hover {
-  background-color: #f0e68c;
+  background-color: rgb(248, 102, 102);
+  color: white;
 }
 
 /* Footer CSS Start (Global) */
@@ -390,7 +392,7 @@ header nav ul li a.active {
 /* Homepage Banner CSS Start */
 .Banner_part {
   padding: 100px 0 80px;
-  background: url(../image/hero_image2.png) no-repeat center center;
+  background: url(../image/Forhomepage.jpg) no-repeat center center;
   background-size: cover;
   min-height: 600px;
   display: flex;
