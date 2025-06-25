@@ -30,7 +30,7 @@ document.getElementById("searchInput").addEventListener("input", async function 
   // Query Supabase
   const { data, error } = await supabase
     .from('landinfo')
-    .select('*')
+    .select('location')
     .ilike('location', `%${searchInput}%`);
 
   if (error) {
@@ -57,6 +57,12 @@ document.getElementById("searchInput").addEventListener("input", async function 
   }
 });
 
+function searchtrigger(){
+localStorage.setItem("mobileNo", usermobileno);
+localStorage.setItem("searchInput", document.getElementById("searchInput").value.trim());
+window.location.href = "../HTML/searchresult.html";
+}
+document.getElementById("searchButton").addEventListener("click", searchtrigger);
 
 
 const findAHome=document.getElementById("find-a-home");

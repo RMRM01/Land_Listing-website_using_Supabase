@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sold Properties</title>
+
+   <link
+    rel="stylesheet"
+    data-purpose="Layout StyleSheet"
+    title="Web Awesome"
+    href="/css/app-wa-54e7be3a62ca9b7580d7f8c669f59e74.css?vsn=d"
+  >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
+    >
+    <link rel="icon" href="../image/logo.png">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+       <link rel="stylesheet" href="../CSS/style1.css">
+</head>
+<body>
+
+  <!-- Nav Bar Start -->
+<header>
+      <div class="container">
+        <div class="logo">
+          <img
+            src="../image/logo.png"
+            alt="LandLister Logo"
+            style="height: 40px; margin-right: 10px"
+          />
+          <span>LandLister</span>
+        </div>
+        <nav>
+         <ul>
+            <li><a href="../HTML/index.html">Home</a></li>
+            <li><a href="../HTML/index.html#land-for-sell">Land For Sell</a></li>
+            <li><a href="../HTML/index.html#sold-property">Sold Properties</a></li>
+            <li><a href="../HTML/about.html" onclick="senddata();">About Us</a></li>
+            <li><a href="../HTML/HelpPage.html" onclick="senddata();">Help</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button class="add-property-btn" id="add-property-btn">
+            <i class="fas fa-plus"></i> Add property
+          </button>
+          <span class="icon user-name" 
+            ><i class="far fa-user-circle"></i> <span id="owner-name"> Rifat</span>
+            </span>
+          <!-- MODIFIED: Removed inline style for color from Log Out link -->
+             <span class="icon-notification" id="notification"> <i class="fa-solid fa-bell"> </i></span>
+          <span class="icon" id="log-out">
+            <a href="../HTML/LogOut.html" class="nav-link"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+          </span>
+        </div>
+      </div>
+    </header>
+
+<!-- Nav Bar End-->
+
+
+<!-- Sold Land List Start -->
+    <div class="Properties_part">
+    
+        <h2 class="property_title-main">Search Result</h2>
+        <div class="poperty_wrapper" id="all-property">
+
+           <!-- sold land sample 
+               <div class="Property_card">
+                <img src="../image/one.jpg.png" alt="./Images/property_home_one.png">
+                <div class="Property_card_info">
+                    <h4 class="Property_title">
+                        Dakkhin khan Land afjoa aofjaoif faeoefj aefoiafjoaf af oawrf
+                    </h4>
+                    <div class="">
+                        <p class="Property_price"><i class="fa-light fa-tag"></i> <span class="price">
+                          80</span><span>/kata</span></span></p>
+                        <p class="location">Dakshin Khan Dhaka 1230</p>
+                        <p class="size"><i class="fa-regular fa-ruler-combined"></i> <span>1450 Square Feet</span></p>
+                         <p class="status">Status: <span class="status-value">Sold</span></p>
+                         <p class="date">Date Of Sold: <span class="sold-date">25-07-2025</span></p>
+                        <a href="#" class="buier-info"> <i class="fa-solid fa-person"></i>Buyier</a>
+                    </div>
+                </div>
+
+              </div> 
+          
+           -->
+
+            
+
+          
+
+            </div>
+            
+
+        
+        
+    </div>
+    
+ </div>
+<!-- Sold Land List End -->
+
+
+
+
+ <!-- =====footer part========================= -->
+
+   <footer class="footer" id="contact">
+        <div class="footer-content container">
+            <div class="footer-column">
+                <div class="logo-footer">
+                    <img src="../image/logo.png" alt="LandLister Logo" style="height: 30px; margin-right: 8px;">
+                      LAND LISTER
+                </div>
+                <p class="contact-info"><i class="far fa-envelope"></i> contact@landlister.com.bd</p>
+                <p class="contact-info"><i class="fas fa-phone-alt"></i> +880 1779073101</p>
+                <address>
+                    The Fantastic Four <br>
+                    Mirpur DOHS, Dhaka-1216<br>
+                    Dhaka,Bangladesh
+                 </address>
+            </div>
+           <div class="footer-column">
+            <h4 style="color: white;">Quick links</h4>
+            <ul>
+                <li><a href="#" style="color: white; text-decoration: none;">Buy Property</a></li>
+                <li><a href="#" style="color: white; text-decoration: none;">Sell Property</a></li>
+                <li><a href="#" style="color: white; text-decoration: none;">Popular Offers</a></li>
+                <li><a href="#" style="color: white; text-decoration: none;">Terms of Service</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4 style="color: white;">Profile</h4>
+            <ul>
+                <li><a href="#" style="color: white; text-decoration: none;">My account</a></li>
+                <li><a href="#" style="color: white; text-decoration: none;">My listings</a></li>
+                <li><a href="#" style="color: white; text-decoration: none;">Add listings</a></li>
+                <li><a href="#" style="color: white; text-decoration: none;">Help center</a></li>
+                <li><a href="#" style="color: white; text-decoration: none;">Privacy policy</a></li>
+            </ul>
+        </div>
+            <div class="footer-column">
+                <h4>Get exclusive advice</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <h3>Thank You</h3>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2025 LandLister Bangladesh. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script  src="../JS/searchresult.js" type="module"></script>
+</body>
+</html>
