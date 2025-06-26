@@ -53,10 +53,11 @@ document.getElementById("user-id").addEventListener("click", function() {
 });
 
 function gettime(time){
+    
 let hours=time.getHours();
 const minut=time.getMinutes();
 const second=time.getSeconds();
-
+alert(hours);
 let ampm;
 if(hours>= 12)
 {
@@ -65,8 +66,8 @@ if(hours>= 12)
 else{
     ampm="AM";
 }
-hours=(hours-6)%12;
-
+hours=(hours+6)%12;
+alert(hours);
 return hours+":"+minut+":"+second+" "+ampm;
 }
 

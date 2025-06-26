@@ -10,7 +10,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 //const user="01779073101";
 const location= localStorage.getItem("searchInput");
 //const location= "Mirpur";
-// alert(location);
+//alert(location);
 let username=document.getElementById("owner-name");
 
 async function getownerdata(){

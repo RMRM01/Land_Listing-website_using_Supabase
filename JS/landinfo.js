@@ -8,34 +8,30 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 const usermobile=localStorage.getItem("mobileNo"); 
 
 
-//const usermobile="01779073101";
-
-
+//const usermobile = "01779073104";
 const landid= localStorage.getItem("landId"); 
-//const landid= "3c3e7cc7-e67f-440d-98d2-1238b905a8c7"; 
-
-//alert(landid);
+//const landid = "3c3e7cc7-e67f-440d-98d2-1238b905a8c7";
 
 
 
+// Fetch buyer name
 async function fetchUserData() {
-    const {data, error}= await supabase
-    .from("users")
-    .select("name")
-    .eq("mobile",usermobile)
-    .single();
+    const { data, error } = await supabase
+        .from("users")
+        .select("name")
+        .eq("mobile", usermobile)
+        .single();
+
     if (error) {
         console.error("Error fetching user data:", error);
-    } 
-
-    else {
+    } else {
         document.getElementById("user-name").innerText = data.name;
     }
 }
 
 fetchUserData();
 
-
+// Fetch land data
 
 
 let type,price,amount,location,facing,name;
@@ -50,7 +46,7 @@ async function getlanddata(){
 
     if(error)
     {
-        console.error("find No data", error);
+        alert("find No data", error);
     }
     else{
         let heading;
@@ -80,7 +76,7 @@ else{
        document.getElementById("property-facing").innerHTML = facing;
       
        document.getElementById("owner-phone").innerHTML = data.registermobile; 
-       document.getElementById("owner-mobile-link").href = data.registermobile; 
+       
        
 // picture of land
 
@@ -179,41 +175,40 @@ buybutton.addEventListener("click", async function () {
 
 });
 
-// notification 
-
-document.getElementById("notification").addEventListener("click", function() {
-  window.location.href = "../HTML/notification.html";
-  localStorage.setItem("mobileNo", usermobileno);
-});
-// go to owner page
 
 
-document.getElementById("user-name").addEventListener("click", function() {
-   window.location.href = "../HTML/ownerinfo.html";
-    localStorage.setItem("mobileNo", usermobileno);
+    // View profile button
+    document.getElementById("view-profile-btn")?.addEventListener("click", function (e) {
+        e.preventDefault();
+        localStorage.setItem("mobileNo", registermobile);
+        window.location.href = "../HTML/ownerInfo.html";
+    });
 
-});
+    // Notification button
+    document.getElementById("notification")?.addEventListener("click", function () {
+        localStorage.setItem("mobileNo", usermobile);
+        window.location.href = "../HTML/notification.html";
+    });
+
+    // User profile redirection
+    document.getElementById("user-name")?.addEventListener("click", function () {
+        localStorage.setItem("mobileNo", usermobile);
+        window.location.href = "../HTML/ownerinfo.html";
+    });
+
+    // Add property button
+    document.getElementById("add-property-btn")?.addEventListener("click", function () {
+        localStorage.setItem("mobileNo", usermobile);
+        window.location.href = "../HTML/AddLandForSell.html";
+    });
+
+    // Logout button
+    document.getElementById("logout-btn")?.addEventListener("click", function () {
+        window.location.href = "../HTML/LogOut.html";
+    });
 
 
-
-// JavaScript for Land Registration Page
-
-document.getElementById("add-property-btn").addEventListener("click", function() {
-   window.location.href = "../HTML/AddLandForSell.html";
-    localStorage.setItem("mobileNo", usermobileno);
-
-});
-
-
-// JavaScript for log out Page
-document.getElementById("logout-btn").addEventListener("click", function() {
-   window.location.href = "../HTML/LogOut.html";
-  
-
-});
-
-// send data
-
+// Optional global function
 function senddata() {
-    localStorage.setItem("mobileNo",usermobileno);
+    localStorage.setItem("mobileNo", usermobile);
 }

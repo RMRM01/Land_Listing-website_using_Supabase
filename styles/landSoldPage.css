@@ -1,0 +1,154 @@
+/* ../styles/landSoldPage.css */
+
+body.sold-land-page-body {
+  font-family: var(--Inter, "Inter"), sans-serif;
+}
+
+.sold_land_part {
+  padding: 60px 0;
+  background-color: var(--theme_dark_secondary, #1a1a2e);
+}
+
+.Sold_land_title {
+  text-align: center;
+  color: var(--text_color_dark_emphasis, #fff);
+  font-family: var(--Inter, "Inter"), sans-serif;
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.sold_card_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.Sold_card {
+  width: 100%;
+  max-width: 900px;
+  background-color: #22243a;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  display: flex;
+  gap: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sold_card_img_div {
+  flex-shrink: 0;
+}
+
+.sold_card_img_div .image_class {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.sold_card_right {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card_riht_title {
+  color: var(--theme_pink_accent, #e94560);
+  font-size: 1.5em;
+  font-family: var(--Inter, "Inter"), sans-serif;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card_right_rate {
+  color: var(--text_color_light, #f1f1f1);
+  font-family: var(--Inter, "Inter"), sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+.card_right_rate img {
+  height: 16px;
+}
+
+.cart_right_subtitle {
+  color: var(--text_color_medium, #ccc);
+  font-family: var(--Inter, "Inter"), sans-serif;
+  font-size: 0.9em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.card_item_wrapper {
+  margin-top: auto;
+}
+
+.card_item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 0.9em;
+}
+
+.card_item p {
+  color: var(--text_color_light, #f1f1f1);
+  font-family: var(--Inter, "Inter"), sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.Property_price {
+  font-weight: 600;
+}
+
+.sold_land_part .btn_div {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .Sold_land_title {
+    font-size: 2.2em;
+  }
+  .Sold_card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .sold_card_img_div .image_class {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+  .sold_card_right {
+    align-items: center;
+  }
+  .cart_right_subtitle {
+    text-align: left;
+  }
+  .card_item {
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Sold_land_title {
+    font-size: 1.8em;
+  }
+  .card_riht_title {
+    font-size: 1.3em;
+  }
+  .sold_card_img_div .image_class {
+    height: 160px;
+  }
+}

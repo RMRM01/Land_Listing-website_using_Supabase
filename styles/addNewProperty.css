@@ -1,0 +1,474 @@
+/* ===================================================================== */
+/* START: Dark Theme Header Styles (Copied from myAccount.css)           */
+/* ===================================================================== */
+
+header {
+  background: #1a1a2e !important;
+  padding: 15px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  color: #fff !important;
+  border-bottom: none !important;
+}
+
+header .container {
+  background-color: transparent !important;
+}
+
+header .logo span {
+  color: #fff !important;
+}
+
+header nav ul li a {
+  color: #eee !important;
+  text-decoration: none !important;
+}
+
+header nav ul li a:hover {
+  color: #e94560 !important;
+}
+
+header .header-actions .add-property-btn {
+  background-color: #e94560 !important;
+  color: #fff !important;
+  border: none !important;
+  padding: 8px 15px !important;
+  border-radius: 4px !important;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+header .header-actions .add-property-btn:hover {
+  background-color: #ff5b74 !important;
+  transform: translateY(-1px);
+}
+
+header .header-actions .add-property-btn i {
+  color: #fff !important;
+}
+
+header .header-actions .user-name a,
+header .header-actions .user-name span {
+  color: #eee !important;
+  text-decoration: none !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+header .header-actions .user-name a:hover {
+  color: #e94560 !important;
+}
+
+header .header-actions .user-name i {
+  color: #eee !important;
+}
+
+header .header-actions .icon a {
+  color: #eee !important;
+  text-decoration: none !important;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+header .header-actions .icon a:hover {
+  color: #e94560 !important;
+}
+
+header .header-actions .icon a i {
+  color: #eee !important;
+}
+
+/* END: Dark Theme Header Styles ===================================== */
+
+/* ===================================================================== */
+/* START: Dark Theme Breadcrumb Styles (Copied from myAccount.css)       */
+/* ===================================================================== */
+
+.breadcrumbs {
+  padding: 15px 0;
+  margin-bottom: 20px;
+  background-color: transparent !important;
+}
+
+.breadcrumbs a {
+  color: #bac8f2 !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+  color: #e94560 !important;
+}
+
+.breadcrumbs span {
+  color: #99aabb !important;
+}
+
+/* END: Dark Theme Breadcrumb Styles ================================= */
+
+/* ===================================================================== */
+/* START: Fix White Line & Page Content BG (Copied from myAccount.css)   */
+/* ===================================================================== */
+
+.page-content {
+  background-color: transparent !important;
+  padding-top: 1px;
+}
+
+/* END: Fix White Line & Page Content BG ============================= */
+
+/* ===================================================================== */
+/* START: Dark Theme Footer Styles (Copied from myAccount.css)           */
+/* ===================================================================== */
+
+.footer {
+  background-color: #1a1a2e !important;
+  color: #b0b0b0 !important;
+  padding: 40px 0 20px !important;
+  margin-top: 40px;
+}
+
+.footer .footer-column .logo-footer {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.footer .footer-column p,
+.footer .footer-column address {
+  color: #a0a0a0 !important;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+.footer .footer-column .contact-info i {
+  color: #e94560 !important;
+  margin-right: 8px;
+}
+
+.footer .footer-column h4 {
+  color: #fff !important;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.footer .footer-column ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.footer .footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer .footer-column ul li a {
+  color: #b0b0b0 !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease;
+}
+
+.footer .footer-column ul li a:hover {
+  color: #e94560 !important;
+}
+
+.footer .social-icons a {
+  color: #b0b0b0 !important;
+  margin-right: 12px;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #e94560 !important;
+}
+.footer .social-icons a:last-child {
+  margin-right: 0;
+}
+
+.footer .footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid #2c2c44 !important;
+}
+
+.footer .footer-bottom p {
+  color: #888 !important;
+  font-size: 0.85em;
+}
+
+/* END: Dark Theme Footer Styles ===================================== */
+
+/* ===================================================================== */
+/* START: Add New Property Page Specific Styles                         */
+/* ===================================================================== */
+
+.add-property-section {
+  background-color: #1a1a2e;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 40px;
+}
+
+.add-property-section .page-title {
+  color: #fff;
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.add-property-section .page-subtitle {
+  color: #ccc;
+  font-size: 1.1em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.property-form .form-section {
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #2d2f5a;
+}
+.property-form .form-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 20px;
+}
+
+.property-form .form-section-title {
+  font-size: 1.4em;
+  color: #e94560;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.property-form .form-section-title i {
+  margin-right: 12px;
+  font-size: 0.9em;
+}
+
+.property-form .form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #eee;
+  font-size: 0.95em;
+}
+.form-group label .required {
+  color: #e94560;
+  margin-left: 4px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="url"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #2d2f5a;
+  border-radius: 6px;
+  background-color: #22244c;
+  color: #fff;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="url"]:focus,
+.form-group input[type="number"]:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  background-color: #2d2f5a;
+  border-color: #e94560;
+  box-shadow: 0 0 0 2px rgba(233, 69, 96, 0.3);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23CCC%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 10px auto;
+  padding-right: 35px;
+}
+
+.form-group select::-moz-focus-inner {
+  border: 0;
+}
+
+.form-group input[type="file"] {
+  background-color: #2d2f5a;
+  color: #eee;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 1px solid #2d2f5a;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 5px;
+}
+.form-group input[type="file"]::-webkit-file-upload-button {
+  background: #e94560;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+.form-group input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: #ff5b74;
+}
+.form-group input[type="file"]:hover {
+  background-color: #3c3f7a;
+}
+.form-group small {
+  font-size: 0.85em;
+  color: #aaa;
+  margin-top: 8px;
+  display: block;
+}
+
+.image-preview-container {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.image-preview-container p {
+  width: 100%;
+  color: #ccc;
+  font-weight: 500;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 5px;
+}
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  background-color: #22244c;
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: #eee;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.checkbox-item:hover {
+  background-color: #2d2f5a;
+}
+.checkbox-item input[type="checkbox"] {
+  margin-right: 10px;
+  accent-color: #e94560;
+  width: 16px;
+  height: 16px;
+}
+
+.form-actions {
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid #2d2f5a;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.form-actions .btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.form-actions .btn-submit-listing {
+  background-color: #e94560;
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(233, 69, 96, 0.3);
+}
+.form-actions .btn-submit-listing:hover {
+  background-color: #ff5b74;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4);
+}
+
+.form-actions .btn-reset-form {
+  background-color: #3e416d;
+  color: #eee;
+}
+.form-actions .btn-reset-form:hover {
+  background-color: #4a4e82;
+}
+
+.form-actions .btn-cancel {
+  background-color: #22244c;
+  color: #ccc;
+  border: 1px solid #2d2f5a;
+}
+.form-actions .btn-cancel:hover {
+  background-color: #2d2f5a;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .add-property-section {
+    padding: 20px;
+  }
+  .add-property-section .page-title {
+    font-size: 1.8em;
+  }
+  .add-property-section .page-subtitle {
+    font-size: 1em;
+    margin-bottom: 25px;
+  }
+  .property-form .form-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .form-actions {
+    flex-direction: column;
+  }
+  .form-actions .btn {
+    width: 100%;
+  }
+}
+
+/* END: Add New Property Page Specific Styles ======================== */

@@ -31,7 +31,8 @@ document.getElementById("searchInput").addEventListener("input", async function 
   const { data, error } = await supabase
     .from('landinfo')
     .select('location')
-    .ilike('location', `%${searchInput}%`);
+    .ilike('location', `%${searchInput}%`)
+    .eq('status', 'Available');
 
   if (error) {
     console.error('Error fetching user data:', error);

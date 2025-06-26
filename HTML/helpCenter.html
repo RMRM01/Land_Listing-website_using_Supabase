@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help Center - LandLister</title>
+    <link rel="stylesheet" href="../styles/styleHome.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+      body.help-center-page-body {
+        background-color: var(--theme_page_bg_dark_blue, #0f2541);
+        font-family: var(--Poppins, "Poppins"), sans-serif;
+      }
+
+      .help-center-wrapper {
+        padding: 40px 0;
+      }
+
+      .help-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .help-header h1 {
+        color: var(--text_color_dark_emphasis, #fff);
+        font-size: 2.8em;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+
+      .help-header p {
+        color: var(--text_color_medium, #ccc);
+        font-size: 1.1em;
+        max-width: 700px;
+        margin: 0 auto 30px auto;
+      }
+
+      .search-bar-container {
+        max-width: 700px;
+        margin: 0 auto 50px auto;
+        position: relative;
+      }
+
+      .search-bar-container input[type="search"] {
+        width: 100%;
+        padding: 15px 20px;
+        padding-right: 50px;
+        font-size: 1em;
+        border-radius: 8px;
+        border: 1px solid #3a4a6b;
+        background-color: #1e2a40;
+        color: var(--text_color_light, #f1f1f1);
+        font-family: var(--Poppins, "Poppins"), sans-serif;
+      }
+      .search-bar-container input[type="search"]:focus {
+        outline: none;
+        border-color: var(--theme_pink_accent, #e94560);
+        box-shadow: 0 0 0 2px rgba(233, 69, 96, 0.2);
+      }
+      .search-bar-container .search-icon {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--text_color_medium, #ccc);
+        font-size: 1.2em;
+      }
+
+      .faq-section {
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: var(--theme_dark_secondary, #1a1a2e);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .faq-category h2 {
+        color: var(--theme_pink_accent, #e94560);
+        font-size: 1.8em;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #2d2f5a;
+        font-weight: 600;
+      }
+      .faq-category + .faq-category {
+        margin-top: 40px;
+      }
+
+      .faq-item {
+        margin-bottom: 15px;
+        border-bottom: 1px solid #2d2f5a;
+      }
+      .faq-item:last-child {
+        border-bottom: none;
+      }
+
+      .faq-question {
+        background-color: transparent;
+        color: var(--text_color_light, #f1f1f1);
+        cursor: pointer;
+        padding: 15px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: background-color 0.3s ease;
+        font-size: 1.1em;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .faq-question:hover {
+        color: var(--theme_pink_accent, #e94560);
+      }
+      .faq-question .toggle-icon {
+        transition: transform 0.3s ease;
+        font-size: 0.9em;
+      }
+      .faq-question.active .toggle-icon {
+        transform: rotate(45deg);
+      }
+
+      .faq-answer {
+        padding: 0px 15px 15px 15px;
+        background-color: transparent;
+        display: none;
+        overflow: hidden;
+        color: var(--text_color_medium, #ccc);
+        font-size: 0.95em;
+        line-height: 1.7;
+      }
+      .faq-answer p {
+        margin-bottom: 10px;
+      }
+      .faq-answer p:last-child {
+        margin-bottom: 0;
+      }
+
+      .header-actions .help-page-header-btn {
+        padding: 8px 15px;
+        border: 1px solid var(--theme_pink_accent, #e94560);
+        color: var(--theme_pink_accent, #e94560);
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .header-actions .help-page-header-btn:hover {
+        background-color: var(--theme_pink_accent, #e94560);
+        color: var(--text_color_dark_emphasis, #fff);
+      }
+      .header-actions .help-page-header-btn i {
+        color: inherit;
+      }
+
+      @media (max-width: 768px) {
+        .help-header h1 {
+          font-size: 2.2em;
+        }
+        .faq-section {
+          padding: 20px;
+        }
+        .faq-category h2 {
+          font-size: 1.5em;
+        }
+        .faq-question {
+          font-size: 1em;
+        }
+      }
+    </style>
+  </head>
+  <body class="help-center-page-body">
+    <div class="page-content-wrapper">
+      <!-- Header Section Start -->
+      <header>
+        <div class="container">
+          <div class="logo">
+            <img
+              src="../assets/images/logo.png"
+              alt="LandLister Logo"
+              style="height: 40px; margin-right: 10px"
+            />
+            <span>LandLister</span>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../htmls/myAccount.html">My Account</a></li>
+              <li><a href="../index.html#properties">Properties</a></li>
+              <li><a href="../htmls/about.html">About Us</a></li>
+              <li><a href="../htmls/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="header-actions">
+            <span class="icon user-name">
+              <a href="../htmls/ownerInfo.html" title="View My Public Profile">
+                <i class="far fa-user-circle"></i> Abdul Karim
+              </a>
+            </span>
+            <span class="icon">
+              <a href="#" title="Log Out">
+                <i class="fas fa-sign-out-alt"></i> Log Out</a
+              >
+            </span>
+          </div>
+        </div>
+      </header>
+      <!-- Header Section End -->
+
+      <!-- Main Content Start -->
+      <main class="container help-center-wrapper">
+        <!-- Help Header Section Start -->
+        <section class="help-header">
+          <h1>Help Center</h1>
+          <p>
+            Find answers to common questions about using LandLister, buying or
+            selling land, and managing your account. If you can't find what
+            you're looking for, feel free to contact us.
+          </p>
+          <div class="search-bar-container">
+            <input
+              type="search"
+              id="faqSearch"
+              placeholder="Search for help topics..."
+            />
+            <i class="fas fa-search search-icon"></i>
+          </div>
+        </section>
+        <!-- Help Header Section End -->
+
+        <!-- FAQ Section Start -->
+        <section class="faq-section">
+          <!-- General Questions Category Start -->
+          <div class="faq-category">
+            <h2>General Questions</h2>
+            <div class="faq-item">
+              <button class="faq-question">
+                What is LandLister?
+                <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  LandLister is an online platform dedicated to connecting land
+                  buyers and sellers. We aim to provide a secure, transparent,
+                  and user-friendly environment for all your land transaction
+                  needs.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                How do I create an account?
+                <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  You can create an account by clicking the "Register" button on
+                  our homepage or login page. You'll need to provide some basic
+                  information like your name, email, and create a password.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                Is it free to use LandLister?
+                <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Browsing listings and contacting sellers is generally free.
+                  Listing a property for sale may involve a fee or subscription.
+                  Please check our "Pricing" or "Sell Your Land" section for
+                  detailed information.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- General Questions Category End -->
+
+          <!-- For Buyers Category Start -->
+          <div class="faq-category">
+            <h2>For Buyers</h2>
+            <div class="faq-item">
+              <button class="faq-question">
+                How do I search for land?
+                <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Use the search bar on our homepage or the "Properties" page.
+                  You can filter by location, land type, size, price range, and
+                  other criteria to find suitable listings.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                What should I check before buying land?
+                <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We strongly recommend verifying all legal documents,
+                  conducting a physical site visit, checking tax status, and
+                  understanding local zoning laws. Please refer to our "Land
+                  Purchase Guidelines" page for detailed advice.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- For Buyers Category End -->
+
+          <!-- For Sellers Category Start -->
+          <div class="faq-category">
+            <h2>For Sellers</h2>
+            <div class="faq-item">
+              <button class="faq-question">
+                How do I list my land for sale?
+                <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Once logged in, navigate to the "Sell Your Land" or "Add
+                  Property" section. You will be guided through a form to
+                  provide details about your land, including location, size,
+                  type, price, and images.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                What information is needed to list a property?
+                <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  You'll need to provide accurate details such as the property
+                  title, description, full address, land area and unit, asking
+                  price, and high-quality images. Clear and comprehensive
+                  information attracts more buyers.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- For Sellers Category End -->
+        </section>
+        <!-- FAQ Section End -->
+      </main>
+      <!-- Main Content End -->
+    </div>
+
+    <!-- Footer Section Start -->
+    <footer class="footer" id="contact">
+      <div class="footer-content container">
+        <div class="footer-column">
+          <div class="logo-footer">
+            <img src="../assets/images/logo.png" alt="LandLister Logo" />
+            LAND LISTER
+          </div>
+          <p class="contact-info">
+            <i class="far fa-envelope"></i> contact@landlister.com.bd
+          </p>
+          <p class="contact-info">
+            <i class="fas fa-phone-alt"></i> +880 1779073101
+          </p>
+          <address>
+            The Fantastic Four <br />
+            Mirpur DOHS, Dhaka-1216<br />
+            Dhaka,Bangladesh
+          </address>
+        </div>
+        <div class="footer-column">
+          <h4 style="color: white">Quick links</h4>
+          <!-- Assuming index.css makes footer text light or we override here -->
+          <ul>
+            <li>
+              <a href="../HTML/AllLandforsell.html" style="color: #eee; text-decoration: none"
+                >Buy Property</a
+              >
+            </li>
+            <li>
+              <a href="../HTML/SoldLand.html" style="color: #eee; text-decoration: none"
+                >Sold Property</a
+              >
+            </li>
+            <li>
+              <a href="../HTML/helpCenter.html" style="color: #eee; text-decoration: none"
+                >Help Center</a
+              >
+            </li>
+            <li>
+              <a href="../HTML/termsOfService.html" style="color: #eee; text-decoration: none"
+                >Terms of Service</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 style="color: white">Profile</h4>
+          <ul>
+            <li>
+              <a href="../HTML/ownerInfo.html" style="color: #eee; text-decoration: none"
+                >My account</a
+              >
+            </li>
+            <li>
+              <a href="../HTML/contact.html" style="color: #eee; text-decoration: none"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a href="../HTML/AddLandForSell.html" style="color: #eee; text-decoration: none"
+                >Add listings</a
+              >
+            </li>
+            <li>
+              <a href="../HTML/helpCenter.html" style="color: #eee; text-decoration: none"
+                >Help center</a
+              >
+            </li>
+            <li>
+              <a href="../HTML/guidlines.html" style="color: #eee; text-decoration: none"
+                >Guidline</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Get exclusive advice</h4>
+          <p class="footer-advice-text">
+            Stay updated with our latest news and offers.
+          </p>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <p>
+          © 2024 LandLister Bangladesh. All rights reserved. Developed by The
+          Fantastic Four.
+        </p>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <script>
+      const faqQuestions = document.querySelectorAll(".faq-question");
+
+      faqQuestions.forEach((question) => {
+        question.addEventListener("click", () => {
+          const answer = question.nextElementSibling;
+          const icon = question.querySelector(".toggle-icon i");
+
+          question.classList.toggle("active");
+
+          if (answer.style.display === "block") {
+            answer.style.display = "none";
+            icon.classList.remove("fa-minus");
+            icon.classList.add("fa-plus");
+          } else {
+            answer.style.display = "block";
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus");
+          }
+        });
+      });
+
+      const faqSearchInput = document.getElementById("faqSearch");
+      if (faqSearchInput) {
+        faqSearchInput.addEventListener("keyup", function (e) {
+          const searchTerm = e.target.value.toLowerCase();
+          const allFaqItems = document.querySelectorAll(".faq-item");
+
+          allFaqItems.forEach((item) => {
+            const questionText = item
+              .querySelector(".faq-question")
+              .textContent.toLowerCase();
+            const answerText = item
+              .querySelector(".faq-answer")
+              .textContent.toLowerCase();
+            if (
+              questionText.includes(searchTerm) ||
+              answerText.includes(searchTerm)
+            ) {
+              item.style.display = "";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

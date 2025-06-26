@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - LandLister</title>
+    <link rel="stylesheet" href="../styles/styleHome.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body.contact-page-body {
+        background-color: var(
+          --theme_page_bg_dark_blue,
+          #0f2541
+        );
+        font-family: var(--Poppins, "Poppins"), sans-serif;
+      }
+
+      .contact-section-wrapper {
+        padding: 60px 0;
+      }
+
+      .contact-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        background-color: var(
+          --theme_dark_secondary,
+          #1a1a2e
+        );
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+
+      .contact-info-section,
+      .contact-form-section {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .contact-section-wrapper h1.page-title {
+        text-align: center;
+        color: var(--text_color_dark_emphasis, #fff);
+        margin-bottom: 15px;
+        font-size: 2.5em;
+        font-weight: 600;
+      }
+      .contact-section-wrapper p.page-subtitle {
+        text-align: center;
+        color: var(--text_color_medium, #ccc);
+        margin-bottom: 40px;
+        font-size: 1.1em;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .contact-info-section h2 {
+        color: var(--theme_pink_accent, #e94560);
+        font-size: 1.8em;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .contact-info-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        gap: 15px;
+      }
+
+      .contact-info-item i {
+        font-size: 1.5em;
+        color: var(--theme_pink_accent, #e94560);
+        width: 30px;
+        text-align: center;
+        margin-top: 3px;
+      }
+
+      .contact-info-item div h3 {
+        font-size: 1.1em;
+        color: var(--text_color_dark_emphasis, #fff);
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+
+      .contact-info-item div p,
+      .contact-info-item div a {
+        font-size: 0.95em;
+        color: var(--text_color_light, #f1f1f1);
+        line-height: 1.6;
+        text-decoration: none;
+      }
+      .contact-info-item div a:hover {
+        color: var(--theme_pink_accent, #e94560);
+        text-decoration: underline;
+      }
+
+      .contact-form-section h2 {
+        color: var(--theme_pink_accent, #e94560);
+        font-size: 1.8em;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: var(--text_color_light, #eee);
+        font-size: 0.95em;
+      }
+
+      .form-group input[type="text"],
+      .form-group input[type="email"],
+      .form-group textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #3a4a6b;
+        border-radius: 8px;
+        background-color: #22244c;
+        color: var(--text_color_dark_emphasis, #fff);
+        font-size: 1em;
+        transition: all 0.3s ease;
+        font-family: var(--Poppins, "Poppins"), sans-serif;
+      }
+
+      .form-group input[type="text"]:focus,
+      .form-group input[type="email"]:focus,
+      .form-group textarea:focus {
+        outline: none;
+        background-color: #2d2f5a;
+        border-color: var(--theme_pink_accent, #e94560);
+        box-shadow: 0 0 0 2px rgba(233, 69, 96, 0.2);
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      .contact-submit-btn {
+        width: 100%;
+        background-color: var(--theme_pink_accent, #e94560);
+        color: var(--text_color_dark_emphasis, #fff);
+        padding: 14px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.05em;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        font-family: var(--Poppins, "Poppins"), sans-serif;
+        margin-top: 10px;
+      }
+
+      .contact-submit-btn:hover {
+        background-color: #ff5b74;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(233, 69, 96, 0.3);
+      }
+
+      .header-actions .contact-page-header-btn {
+        padding: 8px 15px;
+        border: 1px solid var(--theme_pink_accent, #e94560);
+        color: var(--theme_pink_accent, #e94560);
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .header-actions .contact-page-header-btn:hover {
+        background-color: var(--theme_pink_accent, #e94560);
+        color: var(--text_color_dark_emphasis, #fff);
+      }
+      .header-actions .contact-page-header-btn i {
+        color: inherit;
+      }
+
+      @media (max-width: 768px) {
+        .contact-container {
+          flex-direction: column;
+          padding: 30px 20px;
+        }
+        .contact-info-section,
+        .contact-form-section {
+          min-width: unset;
+        }
+        .contact-section-wrapper h1.page-title {
+          font-size: 2em;
+        }
+        .contact-info-section h2,
+        .contact-form-section h2 {
+          font-size: 1.6em;
+          text-align: center;
+        }
+        .contact-info-item {
+          justify-content: center;
+          text-align: center;
+        }
+        .contact-info-item i {
+          margin-bottom: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body class="contact-page-body">
+    <div class="page-content-wrapper">
+      <!-- Header Section Start -->
+      <header>
+        <div class="container">
+          <div class="logo">
+            <img
+              src="../assets/images/logo.png"
+              alt="LandLister Logo"
+              style="height: 40px; margin-right: 10px"
+            />
+            <span>LandLister</span>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../htmls/myAccount.html">My Account</a></li>
+              <li><a href="../index.html#properties">Properties</a></li>
+              <li><a href="../htmls/about.html">About Us</a></li>
+              <li><a href="../htmls/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="header-actions">
+            <span class="icon user-name">
+              <a href="../htmls/ownerInfo.html" title="View My Public Profile">
+                <i class="far fa-user-circle"></i> Abdul Karim
+              </a>
+            </span>
+            <span class="icon">
+              <a href="#" title="Log Out">
+                <i class="fas fa-sign-out-alt"></i> Log Out</a
+              >
+            </span>
+          </div>
+        </div>
+      </header>
+      <!-- Header Section End -->
+
+      <!-- Main Content Section Start -->
+      <main class="contact-section-wrapper">
+        <div class="container">
+          <h1 class="page-title">Get In Touch</h1>
+          <p class="page-subtitle">
+            We'd love to hear from you! Whether you have a question about our
+            platform, need assistance, or just want to share your feedback,
+            please don't hesitate to reach out.
+          </p>
+        </div>
+
+        <div class="contact-container">
+          <!-- Contact Info Section Start -->
+          <section class="contact-info-section">
+            <h2>Contact Information</h2>
+            <div class="contact-info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Our Office</h3>
+                <p>
+                  The Fantastic Four<br />Mirpur DOHS, Dhaka-1216<br />Dhaka,
+                  Bangladesh
+                </p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>
+                  <a href="mailto:contact@landlister.com.bd"
+                    >contact@landlister.com.bd</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i class="fas fa-phone-alt"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p><a href="tel:+88017790XXXXX">+880 17790XXXXX</a></p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h3>Office Hours</h3>
+                <p>
+                  Sunday - Thursday: 9:00 AM - 6:00 PM<br />Friday - Saturday:
+                  Closed
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- Contact Info Section End -->
+
+          <!-- Contact Form Section Start -->
+          <section class="contact-form-section">
+            <h2>Send Us a Message</h2>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="contactName">Full Name</label>
+                <input
+                  type="text"
+                  id="contactName"
+                  name="contactName"
+                  placeholder="Your Full Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email Address</label>
+                <input
+                  type="email"
+                  id="contactEmail"
+                  name="contactEmail"
+                  placeholder="Your Email Address"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contactSubject">Subject</label>
+                <input
+                  type="text"
+                  id="contactSubject"
+                  name="contactSubject"
+                  placeholder="Subject of your message"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contactMessage">Message</label>
+                <textarea
+                  id="contactMessage"
+                  name="contactMessage"
+                  rows="6"
+                  placeholder="Write your message here..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="contact-submit-btn">
+                Send Message
+              </button>
+            </form>
+          </section>
+          <!-- Contact Form Section End -->
+        </div>
+      </main>
+      <!-- Main Content Section End -->
+    </div>
+
+    <!-- Footer Section Start -->
+    <footer class="footer" id="contactPageFooter">
+      <div class="footer-content container">
+        <div class="footer-column">
+          <div class="logo-footer">
+            <img src="../assets/images/logo.png" alt="LandLister Logo" />
+            LAND LISTER
+          </div>
+          <p class="contact-info">
+            <i class="far fa-envelope"></i> contact@landlister.com.bd
+          </p>
+          <p class="contact-info">
+            <i class="fas fa-phone-alt"></i> +880 1779073101
+          </p>
+          <address>
+            The Fantastic Four <br />
+            Mirpur DOHS, Dhaka-1216<br />
+            Dhaka,Bangladesh
+          </address>
+        </div>
+        <div class="footer-column">
+          <h4 style="color: white">Quick links</h4>
+          <!-- Assuming index.css makes footer text light or we override here -->
+          <ul>
+            <li>
+              <a href="../HTML/AllLandforsell.html" style="color: #eee; text-decoration: none"
+                >Buy Property</a
+              >
+            </li>
+            <li>
+              <a href="../HTML/SoldLand.html" style="color: #eee; text-decoration: none"
+                >Sold Property</a
+              >
+            </li>
+            <li>
+              <a href="../HTML/helpCenter.html" style="color: #eee; text-decoration: none"
+                >Help Center</a
+              >
+            </li>
+            <li>
+              <a href="../HTML/termsOfService.html" style="color: #eee; text-decoration: none"
+                >Terms of Service</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 style="color: white">Profile</h4>
+          <ul>
+            <li>
+              <a href="../HTML/ownerInfo.html" style="color: #eee; text-decoration: none"
+                >My account</a
+              >
+            </li>
+            <li>
+              <a href="../HTML/contact.html" style="color: #eee; text-decoration: none"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a href="../HTML/AddLandForSell.html" style="color: #eee; text-decoration: none"
+                >Add listings</a
+              >
+            </li>
+            <li>
+              <a href="../HTML/helpCenter.html" style="color: #eee; text-decoration: none"
+                >Help center</a
+              >
+            </li>
+            <li>
+              <a href="../HTML/guidlines.html" style="color: #eee; text-decoration: none"
+                >Guidline</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <p>
+          © 2024 LandLister Bangladesh. All rights reserved. Developed by The
+          Fantastic Four.
+        </p>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <script>
+      const contactForm = document.getElementById("contactForm");
+
+      if (contactForm) {
+        contactForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const name = document.getElementById("contactName").value.trim();
+          const email = document.getElementById("contactEmail").value.trim();
+          const subject = document
+            .getElementById("contactSubject")
+            .value.trim();
+          const message = document
+            .getElementById("contactMessage")
+            .value.trim();
+
+          if (!name || !email || !subject || !message) {
+            alert("Please fill out all fields.");
+            return;
+          }
+
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+          }
+
+          alert("Message sent successfully! (This is a front-end demo)");
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+body.edit-profile-page-body {
+  background-color: #0f2541;
+  font-family: var(--Poppins, "Poppins"), sans-serif;
+}
+
+.breadcrumbs {
+  padding: 20px 0;
+  margin-bottom: 25px;
+  font-family: var(--Poppins);
+}
+.breadcrumbs a {
+  color: #aeb9e6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.95em;
+}
+.breadcrumbs a:hover {
+  color: var(--theme_pink_accent, #e94560);
+}
+.breadcrumbs span {
+  color: #8c9bc7;
+  font-size: 0.95em;
+}
+
+.page-content.edit-profile-content {
+  padding-top: 1px;
+  padding-bottom: 40px;
+}
+
+.edit-profile-section {
+  background-color: #2c2a4a;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 40px;
+  font-family: var(--Poppins, "Poppins"), sans-serif;
+}
+
+.edit-profile-section .page-title {
+  color: var(--text_color_dark_emphasis, #fff);
+  font-size: 2em;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #4a4869;
+  text-align: center;
+  font-weight: 600;
+}
+
+.profile-form .form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px 30px;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text_color_light, #f1f1f1);
+  font-size: 0.95em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #4a4869;
+  border-radius: 8px;
+  background-color: #1e2a40;
+  color: var(--text_color_dark_emphasis, #fff);
+  font-size: 1em;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  font-family: var(--Poppins, "Poppins"), sans-serif;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group textarea:focus {
+  outline: none;
+  background-color: #2a3b57;
+  border-color: var(--theme_pink_accent, #e94560);
+  box-shadow: 0 0 0 2px rgba(233, 69, 96, 0.3);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-group.form-group-full {
+  grid-column: 1 / -1;
+}
+
+.avatar-upload-group {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #1a192e;
+  padding: 25px 20px;
+  border-radius: 8px;
+  border: 2px dashed #4a4869;
+}
+.avatar-upload-group label {
+  font-size: 1.1em;
+  color: var(--text_color_dark_emphasis, #fff);
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+.current-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 3px solid var(--theme_pink_accent, #e94560);
+  box-shadow: 0 0 10px rgba(233, 69, 96, 0.3);
+}
+.current-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.form-group input[type="file"] {
+  background-color: var(--theme_pink_accent, #e94560);
+  color: var(--text_color_dark_emphasis, #fff);
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  display: inline-block;
+  max-width: 200px;
+  font-family: var(--Poppins, "Poppins"), sans-serif;
+  font-weight: 500;
+}
+.form-group input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden;
+  display: none;
+}
+.form-group input[type="file"]:hover {
+  background-color: #ff5b74;
+}
+.avatar-upload-group small {
+  font-size: 0.85em;
+  color: var(--text_color_medium, #ccc);
+  margin-top: 15px;
+}
+
+.form-actions {
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid #4a4869;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.form-actions .btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  font-family: var(--Poppins, "Poppins"), sans-serif;
+}
+
+.form-actions .btn-save {
+  background-color: var(--theme_pink_accent, #e94560);
+  color: var(--text_color_dark_emphasis, #fff);
+  box-shadow: 0 3px 10px rgba(233, 69, 96, 0.3);
+}
+.form-actions .btn-save:hover {
+  background-color: #ff5b74;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4);
+}
+
+.form-actions .btn-cancel {
+  background-color: #38365a;
+  color: var(--text_color_light, #eee);
+  border: 1px solid #4a4869;
+}
+.form-actions .btn-cancel:hover {
+  background-color: #4a4869;
+  color: var(--text_color_dark_emphasis, #fff);
+}
+
+@media (max-width: 768px) {
+  .edit-profile-section {
+    padding: 20px;
+  }
+  .edit-profile-section .page-title {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+  .profile-form .form-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .avatar-upload-group {
+    padding: 20px 15px;
+  }
+  .current-avatar {
+    width: 120px;
+    height: 120px;
+  }
+  .form-actions {
+    flex-direction: column;
+  }
+  .form-actions .btn {
+    width: 100%;
+  }
+}

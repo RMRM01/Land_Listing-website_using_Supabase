@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --primary_text_color: #111827;
+  --secondary_text_color: #333d4c;
+  --background_color_light: #fff;
+  --theme_pink_accent: #e94560;
+  --theme_dark_primary: #121212;
+  --theme_dark_secondary: #1a1a2e;
+  --theme_dark_tertiary: #16213e;
+  --text_color_light: #f1f1f1;
+  --text_color_medium: #ccc;
+  --text_color_dark_emphasis: #fff;
+  --Inter: "Inter", sans-serif;
+}
+
+/* ============== Global Styles / Reset ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--Inter), Arial, sans-serif;
+  background-color: var(--theme_dark_secondary);
+  color: var(--text_color_light);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content-wrapper {
+  flex: 1 0 auto;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ============== Header CSS Start ================= */
+header {
+  background: var(--theme_dark_tertiary) !important;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  color: var(--text_color_dark_emphasis);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #2c2c44;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: var(--Inter);
+}
+
+header .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--text_color_light);
+  font-family: var(--Inter);
+  font-weight: 500;
+  font-size: 16px;
+  padding: 5px 0;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: var(--theme_pink_accent);
+  border-bottom: 2px solid var(--theme_pink_accent);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-actions .add-property-btn {
+  background-color: var(--theme_pink_accent);
+  color: var(--text_color_dark_emphasis);
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: var(--Inter);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+
+.header-actions .add-property-btn:hover {
+  background-color: #ff5b74;
+  transform: translateY(-1px);
+}
+.header-actions .add-property-btn i {
+  font-size: 1em;
+}
+
+.header-actions .icon {
+  cursor: pointer;
+  color: var(--text_color_light);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--Inter);
+  font-size: 15px;
+}
+.header-actions .icon a {
+  color: var(--text_color_light);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.header-actions .icon a:hover {
+  color: var(--theme_pink_accent);
+}
+.header-actions .icon i {
+  font-size: 20px;
+}
+/* ============== Header CSS End ================= */
+
+/* ============== Property Section CSS Start ================= */
+.Properties_part {
+  padding: 60px 0;
+}
+
+.Properties_part > .container > .property_title {
+  color: var(--text_color_dark_emphasis);
+  font-family: var(--Inter);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.poperty_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+}
+.poperty_wrapper + .poperty_wrapper {
+  margin-top: 60px;
+}
+
+.Property_card {
+  border: 1px solid #333;
+  border-radius: 10px;
+  background-color: #22243a;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Property_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.Property_card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.Property_card_info {
+  padding: 20px 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.Property_card_info .Property_title {
+  margin-top: 0;
+  color: var(--theme_pink_accent);
+  font-family: var(--Inter);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+.Property_card_info > div {
+  margin-top: auto;
+}
+
+.Property_price {
+  color: var(--text_color_dark_emphasis);
+  font-family: var(--Inter);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+.Property_price i {
+  margin-right: 8px;
+  font-size: 0.9em;
+}
+
+.location {
+  margin-top: 8px;
+  color: var(--text_color_medium);
+  font-family: var(--Inter);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.57;
+  margin-bottom: 8px;
+}
+
+.size {
+  color: var(--text_color_light);
+  font-family: var(--Inter);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.57;
+}
+.size i {
+  margin-right: 8px;
+  font-size: 0.9em;
+}
+/* ============== Property Section CSS End ================= */
+
+/* ============== Footer CSS Start ================= */
+.footer {
+  background-color: var(--theme_dark_tertiary);
+  color: #b0b0b0;
+  padding: 60px 0 20px;
+  margin-top: auto;
+  flex-shrink: 0;
+  border-top: 1px solid #2c2c44;
+}
+
+.footer .footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.footer .footer-column .logo-footer {
+  color: var(--text_color_dark_emphasis);
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: var(--Inter);
+}
+.footer .footer-column .logo-footer img {
+  height: 30px;
+  margin-right: 8px;
+}
+
+.footer .footer-column h4 {
+  color: var(--text_color_dark_emphasis);
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-family: var(--Inter);
+  font-weight: 600;
+}
+
+.footer .footer-column p,
+.footer .footer-column address {
+  color: #a0a0a0;
+  font-size: 0.9em;
+  line-height: 1.6;
+  font-family: var(--Inter);
+}
+.footer .footer-column address {
+  font-style: normal;
+  margin-top: 10px;
+}
+
+.footer .footer-column .contact-info {
+  margin-bottom: 8px;
+}
+.footer .footer-column .contact-info i {
+  color: var(--theme_pink_accent);
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+}
+
+.footer .footer-column ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer .footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer .footer-column ul li a {
+  color: #b0b0b0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: var(--Inter);
+  font-size: 0.95em;
+}
+.footer .footer-column ul li a:hover {
+  color: var(--theme_pink_accent);
+}
+
+.social-icons a {
+  color: #b0b0b0;
+  margin-right: 15px;
+  font-size: 1.3em;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--theme_pink_accent);
+}
+.social-icons a:last-child {
+  margin-right: 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  margin-top: 30px;
+  border-top: 1px solid #2c2c44;
+}
+.footer .footer-bottom p {
+  color: #888;
+  font-size: 0.9em;
+  font-family: var(--Inter);
+}
+/* ============== Footer CSS End ================= */
+
+/* ============== Responsive Adjustments Start ================= */
+@media (max-width: 992px) {
+  /* Tablet */
+  header .container {
+  }
+  header nav ul {
+    gap: 15px;
+  }
+  .poperty_wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile */
+  header .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  header nav {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 5px;
+  }
+  header nav ul {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 0 5px;
+  }
+  header .header-actions {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .header-actions .add-property-btn {
+    width: 80%;
+    justify-content: center;
+  }
+  .Properties_part > .container > .property_title {
+    font-size: 30px;
+  }
+  .Property_card_info .Property_title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Smaller Mobile */
+  header .logo span {
+    font-size: 20px;
+  }
+  header nav ul li a {
+    font-size: 14px;
+  }
+  .Properties_part > .container > .property_title {
+    font-size: 26px;
+  }
+  .poperty_wrapper {
+    grid-template-columns: 1fr;
+  }
+  .footer .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer .footer-column .logo-footer,
+  .footer .footer-column .social-icons {
+    justify-content: center;
+  }
+  .footer .footer-column .contact-info i {
+    margin-right: 5px;
+  }
+}
+/* ============== Responsive Adjustments End ================= */
