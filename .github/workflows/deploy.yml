@@ -1,0 +1,25 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  pages: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build website
+        run: |
+          # build your site here if needed
+          echo "Hello GitHub Pages" > index.html
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
