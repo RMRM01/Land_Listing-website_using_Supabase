@@ -40,15 +40,17 @@ const availableLandList = document.getElementById("all-available-land");
 const soldLandList = document.getElementById("all-sold-land-btn");
 
 availableLandList.addEventListener("click", () => {
-  window.location.href = "../HTML/AllLandforsell.html";
-  localStorage.setItem("mobileNo", usermobileno);
+   //window.location.href = "../HTML/AllLandforsell.html";
+  // localStorage.setItem("mobileNo", usermobileno);
+  alert('Please Register First');
 });
 
 
 // for sold land
 soldLandList.addEventListener("click", () => {
-  window.location.href = "../HTML/SoldLand.html";
-  localStorage.setItem("mobileNo", usermobileno);
+  // window.location.href = "../HTML/SoldLand.html";
+  // localStorage.setItem("mobileNo", usermobileno);
+  alert('Please Register First');
 }); 
 
 
