@@ -1,25 +1,55 @@
+# deploy.yml
 name: Deploy to GitHub Pages
 
 on:
+  # Runs on pushes targeting the default branch
   push:
     branches:
-      - master
+      - master  # Or 'main' if that is your default branch
 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  id-token: write
-  pages: write
   contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  deploy:
+  # Build job
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
+      - name: Checkout
+        uses: actions/checkout@v4
+      
       - name: Build website
         run: |
-          # build your site here if needed
-          echo "Hello GitHub Pages" > index.html
+          # This is where you would run your real build command (e.g., npm run build)
+          # For this example, we'll just create a simple index.html file.
+          echo "<h1>Hello from GitHub Actions!</h1>" > index.html
+          echo "<p>This page was deployed automatically.</p>" >> index.html
 
+      - name: Upload artifact
+        # This is the key step! It packages your site files.
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload everything from the root directory
+          path: '.'
+
+  # Deployment job
+  deploy:
+    # This job needs the 'build' job to complete first
+    needs: build
+
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
       - name: Deploy to GitHub Pages
+        id: deployment
+        # This step now finds the artifact uploaded in the 'build' job
         uses: actions/deploy-pages@v4
