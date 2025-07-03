@@ -57,7 +57,7 @@ function gettime(time){
 let hours=time.getHours();
 const minut=time.getMinutes();
 const second=time.getSeconds();
-alert(hours);
+//alert(hours);
 let ampm;
 if(hours>= 12)
 {
@@ -67,7 +67,7 @@ else{
     ampm="AM";
 }
 hours=(hours+6)%12;
-alert(hours);
+//alert(hours);
 return hours+":"+minut+":"+second+" "+ampm;
 }
 

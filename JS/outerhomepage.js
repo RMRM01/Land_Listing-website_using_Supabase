@@ -59,9 +59,9 @@ soldLandList.addEventListener("click", () => {
 // JavaScript for Land Registration Page
 
 document.getElementById("add-property-btn").addEventListener("click", function() {
-   window.location.href = "../HTML/AddLandForSell.html";
-    localStorage.setItem("mobileNo", usermobileno);
+alert("Please register first to add a property.");
 
+window.location.href = "../HTML/resistration.html";
 });
 
 
