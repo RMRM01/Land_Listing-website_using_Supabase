@@ -173,10 +173,11 @@ getfewsoldland();
 document.getElementById("all-property").addEventListener("click", function(event) {
     const target = event.target.closest(".Property_card");
     if (target) {
-        const landId = target.dataset.id;
-        localStorage.setItem("landId", landId);
-        localStorage.setItem("mobileNo", usermobileno);
-        window.location.href = "../HTML/landinfo.html";
+        // const landId = target.dataset.id;
+        // localStorage.setItem("landId", landId);
+        // localStorage.setItem("mobileNo", usermobileno);
+        // window.location.href = "../HTML/landinfo.html";
+  alert('Please Register First, Thank You');
     }
 });
 
@@ -189,10 +190,11 @@ function senddata() {
 document.getElementById("all-sold-land").addEventListener("click", function(event) {
     const target = event.target.closest(".Property_card");
     if (target) {
-        const landId = target.dataset.id;
-        localStorage.setItem("landId", landId);
-        localStorage.setItem("mobileNo", usermobileno);
-        window.location.href = "../HTML/landinfo.html";
+        // const landId = target.dataset.id;
+        // localStorage.setItem("landId", landId);
+        // localStorage.setItem("mobileNo", usermobileno);
+        // window.location.href = "../HTML/landinfo.html";
+      alert('Please Register First, Thank You');
     }
 });
 
