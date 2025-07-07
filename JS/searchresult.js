@@ -113,3 +113,14 @@ document.getElementById("notification").addEventListener("click", function() {
   window.location.href = "../HTML/notification.html";
   localStorage.setItem("mobileNo", usermobileno);
 });
+
+// Onclick for available land
+document.getElementById("all-property").addEventListener("click", function(event) {
+    const target = event.target.closest(".Property_card");
+    if (target) {
+        const landId = target.dataset.id;
+        localStorage.setItem("landId", landId);
+        localStorage.setItem("mobileNo", usermobileno);
+        window.location.href = "../HTML/landinfo.html";
+    }
+});
