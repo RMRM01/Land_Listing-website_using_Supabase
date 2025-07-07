@@ -99,6 +99,24 @@
         padding: 20px 15px;
       }
     }
+
+  input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    /* (1) FIX THE FLASH: Use a long transition to trick the browser */
+    transition: background-color 5000s ease-in-out 0s;
+
+    /* (2) FIX THE BACKGROUND: Use an inset box-shadow to override the color */
+    box-shadow: 0 0 0 30px #1a1a2e inset !important; /* Change #2c3e50 to your form's background color */
+
+    /* (3) FIX THE TEXT COLOR: Force your own text color */
+    -webkit-text-fill-color: #eee !important; /* Change #ffffff to your desired text color */
+
+    /* (4) FIX THE CARET COLOR: Force your own caret color */
+    caret-color: #eee !important; /* Change #ffffff to your desired text color (same as above) */
+}
+
   </style>
 </head>
 
@@ -107,17 +125,17 @@
     <h2>Registration Form</h2>
     <div class="name">
       <label for="name">Name</label>
-      <input type="text" id="name" placeholder="Enter your name">
+      <input type="text" id="name" placeholder="Enter your name" spellcheck="false">
     </div>
     
     <div>
       <label for="f_name">Father's Name</label>
-      <input type="text" id="f_name" placeholder="Enter father's name">
+      <input type="text" id="f_name" placeholder="Enter father's name" spellcheck="false">
     </div>
     
     <div>
       <label for="NID">NID</label>
-      <input type="text" id="NID" placeholder="Enter NID number">
+      <input type="text" id="NID" placeholder="Enter NID number" spellcheck="false">
     </div>
 
     <div>
@@ -127,11 +145,11 @@
 
     <div>
       <label for="m_n">Mobile No</label>
-      <input type="text" id="m_n" placeholder="Enter 10-digit number">
+      <input type="text" id="m_n" placeholder="Enter 10-digit number" spellcheck="false">
     </div>
     <div>
       <label for="email">E-mail</label>
-      <input type="text" id="email" placeholder="Enter Your valid Email">
+      <input type="text" id="email" placeholder="Enter Your valid Email" spellcheck="false">
     </div>
 
      <div>

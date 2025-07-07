@@ -58,7 +58,7 @@
       border: none;
       border-radius: 6px;
       background-color: #22244c;
-      color: #fff;
+      color: #eee;
       font-size: 14px;
       transition: all 0.3s ease;
     }
@@ -100,6 +100,28 @@
         padding: 30px 20px;
       }
     }
+    /* --- FIX FOR BROWSER AUTOFILL BACKGROUND --- */
+
+/* --- ENHANCED FIX FOR BROWSER AUTOFILL (NO FLASH) --- */
+
+/* --- FINAL FIX FOR BROWSER AUTOFILL STYLES --- */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    /* (1) FIX THE FLASH: Use a long transition to trick the browser */
+    transition: background-color 5000s ease-in-out 0s;
+
+    /* (2) FIX THE BACKGROUND: Use an inset box-shadow to override the color */
+    box-shadow: 0 0 0 30px #22244c inset !important; /* Change #2c3e50 to your form's background color */
+
+    /* (3) FIX THE TEXT COLOR: Force your own text color */
+    -webkit-text-fill-color: #eee !important; /* Change #ffffff to your desired text color */
+
+    /* (4) FIX THE CARET COLOR: Force your own caret color */
+    caret-color: #eee !important; /* Change #ffffff to your desired text color (same as above) */
+}
   </style>
 </head>
 

@@ -472,3 +472,22 @@ header .header-actions .icon a i {
 }
 
 /* END: Add New Property Page Specific Styles ======================== */
+
+/* fixing the auto fill bg-color and text color */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    /* (1) FIX THE FLASH: Use a long transition to trick the browser */
+    transition: background-color 5000s ease-in-out 0s;
+
+    /* (2) FIX THE BACKGROUND: Use an inset box-shadow to override the color */
+    box-shadow: 0 0 0 30px #22244c inset !important; /* Change #2c3e50 to your form's background color */
+
+    /* (3) FIX THE TEXT COLOR: Force your own text color */
+    -webkit-text-fill-color: #eee !important; /* Change #ffffff to your desired text color */
+
+    /* (4) FIX THE CARET COLOR: Force your own caret color */
+    caret-color: #eee !important; /* Change #ffffff to your desired text color (same as above) */
+}
