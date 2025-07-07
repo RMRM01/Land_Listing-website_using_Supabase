@@ -20,8 +20,9 @@ const registerLand=document.getElementById("register-land");
 
 
 findAHome.addEventListener("click", () => {
-  window.location.href = "../HTML/AllLandforsell.html";
-  localStorage.setItem("mobileNo", usermobileno);
+    alert("Please Resistration First, Thank You");
+  window.location.href = "../HTML/resistration.html";
+  //localStorage.setItem("mobileNo", usermobileno);
 });
 
 registerLand.addEventListener("click", function() {
@@ -43,6 +44,7 @@ availableLandList.addEventListener("click", () => {
    //window.location.href = "../HTML/AllLandforsell.html";
   // localStorage.setItem("mobileNo", usermobileno);
   alert('Please Register First');
+  window.location.href ="../HTML/resistration.html"; 
 });
 
 
@@ -51,6 +53,7 @@ soldLandList.addEventListener("click", () => {
   // window.location.href = "../HTML/SoldLand.html";
   // localStorage.setItem("mobileNo", usermobileno);
   alert('Please Register First');
+  window.location.href ="../HTML/resistration.html"; 
 }); 
 
 
@@ -63,7 +66,7 @@ soldLandList.addEventListener("click", () => {
 document.getElementById("add-property-btn").addEventListener("click", function() {
 alert("Please register first to add a property.");
 
-window.location.href = "/Land_Listing-website_using_Supabase/HTML/resistration.html" || "../HTML/resistration.html"; 
+window.location.href ="../HTML/resistration.html"; 
 });
 
 
@@ -178,7 +181,7 @@ document.getElementById("all-property").addEventListener("click", function(event
         // localStorage.setItem("mobileNo", usermobileno);
         // window.location.href = "../HTML/landinfo.html";
   alert('Please Register First, Thank You');
-  window.location.href = "/Land_Listing-website_using_Supabase/HTML/resistration.html" || "../HTML/resistration.html"; 
+  window.location.href ="../HTML/resistration.html"; 
     }
 });
 
@@ -196,7 +199,7 @@ document.getElementById("all-sold-land").addEventListener("click", function(even
         // localStorage.setItem("mobileNo", usermobileno);
         // window.location.href = "../HTML/landinfo.html";
       alert('Please Register First, Thank You');
-      window.location.href = "/Land_Listing-website_using_Supabase/HTML/resistration.html" || "../HTML/resistration.html"; 
+      window.location.href ="../HTML/resistration.html"; 
     }
 });
 
